@@ -72,7 +72,7 @@ This graphic shows statistics specific to students about their sleeping habits a
 This graph shows the sleep deprivation statistic of each state in the U.S. In our project, we propose to create a similar information visualization and allow users to explore state-level details.
 
 
-## Team Coordination 
+## 5.0 Team Coordination 
 
 **Weekly Meeting Time:** Thursday 3:30 - 5:30 P.M.  
 **Source:** https://www.when2meet.com/?8325592-N2c2A
@@ -92,7 +92,7 @@ Explore how important the role of sleeping could be for everyone's life and ackn
 
 **Balqisa:**
 
-- **Goals**: 
+- **Goals**:  
 Produce good quality work and gain relevant data science skills. 
 
 - **Roles**: 
@@ -110,7 +110,7 @@ Produce good quality work and gain relevant data science skills.
 >
 
 
-## References:  
+## 6.0 References:  
 - Marcin (2017, June 27). 10 Things That Happen to Your Body When You Lose Sleep. Healthline. Retrieved from https://www.healthline.com/health/healthy-sleep/what-happens-to-your-body-when-you-lose-sleep
 - Author not listed (2018, May 30). Why lack of sleep is bad for your health. NHS. Retrieved from https://www.nhs.uk/live-well/sleep-and-tiredness/why-lack-of-sleep-is-bad-for-your-health/
 - Author not Listed (2019). About ACHA-NCHA. ACHA-NCHA. Retrieved from
