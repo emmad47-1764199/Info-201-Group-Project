@@ -1,4 +1,4 @@
- # The Importance of Sleep
+# The Importance of Sleep
 ### Project:
 Why sleep when there’s Netflix?
 
@@ -14,9 +14,9 @@ The Information School
 University of Washington  
 Autumn 2019
 
-## Introduction
+## 1.0 Introduction
 
-**Problem Situation:**
+**1.1 Problem Situation:**
 
 >Sleep is essential for human survival, success, and maintaining the balance for overall health yet so many still don’t view sleep as a basic human right. As a result, this study will look at the relationship between sleep and overall success. Sleep is a major part of health and wellbeing yet many policies surrounding poverty and workers rights don't take into account this value. This factor then raises questions on what we value and deem as important.
 
@@ -24,23 +24,23 @@ Autumn 2019
 
 >Approximately one-third of the American population does not get enough sleep, yet a lack of sleep can have serious effects such as poor physical and mental health (Healthline 1). Oftentimes, people prioritize other responsibilities, such as work, school, exercise and socialization over sleep, but at a certain level of lack of sleep, performance in these tasks are diminished. This study will assess the tradeoff between getting enough sleep and accomplishing these other activities.  
 
-**Why does it matter?**
+**1.3 Why does it matter?**
 
 >Sleep is essential to human life. Therefore, it should be prioritized to people so they can enjoy their lives at full potential. According to NHS, without the right amount of sleep people experience short term effects such as short tempers, lack of focus, and fatigue. They can also experience numerous long term effects including depression, anxiety, obesity, heart disease, and shortened life expectancy. When people suffer these consequences, it affects their daily life in many places such as relationships, work ethic, performance, and even overall self love and confidence.
 
-**How will it be addressed?**
+**1.4 How will it be addressed?**
 
 >In the study, “success” will be broken down into different factors such as Health(life length), Happiness(life satisfaction), Confidence Level, Salary Level, Education Level, GPA, Extracurricular Activity, etc. Looking at how sleep affects these factors of “success” will allow us to address whether or not sleep affects performance levels in these areas. The study will gather data by using pre-existing datasets surrounding sleep.
 
-## Research questions
+## 2.0 Research Questions
 
 1. How does the amount of sleep one gets correlate to their career pathway/education?
 
 2. How does the amount of sleep one gets correlate to their overall health and self-love?
 
-## Possible data sets
+## 3.0 Possible Data Sets
 
- ### American College Health Association - National College Health Assessment
+### American College Health Association - National College Health Assessment
 
 **Description:**  
 The ACHA-National College Health Assessment is a nationally recognized research survey that covers a wide range of health issues about college students. It has large enough polls and provides sufficient evidence for the correlation between college students’ academic performance and several factors.
@@ -63,9 +63,9 @@ https://www.sleepfoundation.org/professionals/sleep-america-polls/2008-sleep-per
 **Observations:** 1000  
 **Number of Attributes:** 217
 
-## Visualizations
+## 4.0 Information Visualizations
 
- ![A data visual of sleep patterns in college students](images/collegeVisual.jpg)  
+![A data visual of sleep patterns in college students](images/collegeVisual.jpg)  
 This graphic shows statistics specific to students about their sleeping habits and why they have them. We plan to make a similar visualization representing sleep correlations with specific jobs, education, and salaries. In our project, we would like to implement something similar.
 
 ![A data visual of sleep patterns per state in America](images/StateVisual.png)  
@@ -85,7 +85,8 @@ This graph shows the sleep deprivation statistic of each state in the U.S. In ou
 - **Roles**:  
 
 **Rae**:   
-- **Goals**:
+- **Goals**:  
+Explore how important the role of sleeping could be for everyone's life and acknowledge myself its importantce as I really have trouble dealing with sleeping. Manage the skill playing with data, especially data visualization, which is the topic I've been interested for so long. I hope our project could be presented beautifully to other people at the very end.
 
 - **Roles**:  
 
