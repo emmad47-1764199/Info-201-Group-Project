@@ -43,7 +43,7 @@ Autumn 2019
 ### *American College Health Association - National College Health Assessment*
 
 **Description:**  
-The ACHA-National College Health Assessment is a nationally recognized research survey that covers a wide range of health issues about college students. It has large enough polls and provides sufficient evidence for the correlation between college students’ academic performance and several factors.
+>The ACHA-National College Health Assessment is a nationally recognized research survey that covers a wide range of health issues about college students. It has large enough polls and provides sufficient evidence for the correlation between college students’ academic performance and several factors.
 
 **Link:**   
 https://www.acha.org/NCHA/ACHA-NCHA_Data/Publications_and_Reports/NCHA/Data/Reports_ACHA-NCHAIIc.aspx
@@ -55,7 +55,7 @@ https://www.acha.org/NCHA/ACHA-NCHA_Data/Publications_and_Reports/NCHA/Data/Repo
 ### *2008 Sleep, Performance and the Workplace*
 
 **Description:**   
-A nationwide survey of Americans conducted by the National Sleep Foundation on how much sleep they get and how it effects their daily lives with tasks such as work, driving, sex life, and life at home.
+>A nationwide survey of Americans conducted by the National Sleep Foundation on how much sleep they get and how it effects their daily lives with tasks such as work, driving, sex life, and life at home.
 
 **Link:**  
 https://www.sleepfoundation.org/professionals/sleep-america-polls/2008-sleep-performance-and-workplace
@@ -110,7 +110,7 @@ Focus on analyzing data to learn the correlation between sleep, health, and happ
 >At our group meeting every week, we decide who needs to do what tasks by a certain deadline. We then use a group chat to communicate whenever there are any questions or concerns along the way.
 
 ### Commitment on feedback, teamwork, communication  and challenges:
-> We have a commitment to be honest with each other and to give critical feedback in a kind manner and to ensure that we continue to give feedback, we have decided that at the end of each meeting we will start off by each commenting on something that we could do better as a group and then each commenting on something that we like about what we have done so far with our project.
+> We have a commitment to be honest with each other and to give critical feedback in a kind manner. To ensure that we continue to give feedback, we have decided that at the end of each meeting we will start off by each commenting on something that we could do better as a group and then each comment on something that we like about what we have done so far with our project.
 
 ## 6.0 Questions for Teaching Team
 > First of all, we are open to any suggestions that you have for our project.
