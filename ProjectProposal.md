@@ -72,11 +72,7 @@ This graphic shows statistics specific to students about their sleeping habits a
 This graph shows the sleep deprivation statistic of each state in the U.S. In our project, we propose to create a similar information visualization and allow users to explore state-level details.
 
 
-<<<<<<< HEAD
 ## 5.0 Team Coordination 
-=======
-## Team Coordination
->>>>>>> 39426bb5781e0141c409b2036d7c6c26c895bae3
 
 **Weekly Meeting Time:** Thursday 3:30 - 5:30 P.M.  
 **Source:** https://www.when2meet.com/?8325592-N2c2A
@@ -96,14 +92,7 @@ Explore how important the role of sleeping could be for everyone's life and ackn
 
 **Balqisa:**
 
-<<<<<<< HEAD
-- **Goals**:  
-Produce good quality work and gain relevant data science skills. 
-
-- **Roles**: 
-=======
 - **Goals**: Produce good quality work and gain relevant data science skills.
->>>>>>> 39426bb5781e0141c409b2036d7c6c26c895bae3
 
 - **Roles**:
 
