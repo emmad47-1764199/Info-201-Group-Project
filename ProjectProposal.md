@@ -79,26 +79,32 @@ Figure 2: This graphic shows the sleep deprivation statistic of each state in th
 ### Individual goals/roles:
 **Jocelyn:**  
 - **Goals**:  
- Gather and analyze data on a topic of which the resulting analytics can benefit society and provide interesting results. Also, I’d like to produce the findings on Github in such a way that it may be displayed as a project on my resume or Linkedin profile.
+Gather and analyze data on a topic of which the resulting analytics can benefit society and provide interesting results. Also, I’d like to produce the findings on Github in such a way that it may be displayed as a project on my resume or Linkedin profile.
 
-- **Roles**: data organizer, coder, and designer.
+- **Roles**:  
+Data organizer, coder, and designer.
 
 **Rae**:   
 - **Goals**:  
 Explore how important the role of sleeping could be for everyone's life and acknowledge myself its importance as I really have trouble dealing with sleeping. Manage the skill playing with data, especially data visualization, which is the topic I've been interested for so long. I hope our project could be presented beautifully to other people at the very end.
 
-- **Roles**:  Present the dat a in a meaningful and understandable fashion.
+- **Roles**:  
+Present the data in a meaningful and understandable fashion.
 
 **Balqisa**:
 
-- **Goals**: Produce good quality work and gain relevant data science skills.
+- **Goals**:  
+Produce good quality work and gain relevant data science skills.
 
-- **Roles**: Primarily researching to find both reliable data for our study and other sources to understand the stake of the sleep problem around the world.
+- **Roles**:  
+Primarily researching to find both reliable data for our study and other sources to understand the stake of the sleep problem around the world.
 
 **Emma**:
-- **Goals**: Analyze and present data in a way that can have an impact on the way my audience values sleep and have a deeper understanding myself about the importance of sleep.
+- **Goals**:  
+Analyze and present data in a way that can have an impact on the way my audience values sleep and have a deeper understanding myself about the importance of sleep.
 
-- **Roles**: Focus on analyzing data to learn the correlation between sleep, health, and happiness.
+- **Roles**:  
+Focus on analyzing data to learn the correlation between sleep, health, and happiness.
 
 ### Weekly Communication Commitment:
 >At our group meeting every week, we decide who needs to do what tasks by a certain deadline. We then use a group chat to communicate whenever there are any questions or concerns along the way.
