@@ -68,7 +68,7 @@ https://www.sleepfoundation.org/professionals/sleep-america-polls/2008-sleep-per
 ![A data visual of sleep patterns in college students](https://i.pinimg.com/originals/8a/2b/bc/8a2bbcdfc909555e43d136caf5e79795.jpg)  
 Figure 1: This graphic shows statistics specific to students about their sleeping habits and why they have them. We plan to make a similar visualization representing sleep correlations with specific jobs, education, and salaries. In our project, we would like to implement something similar.
 
-![A data visual of sleep patterns per state in America](images/StateVisual.png)  
+![A data visual of sleep patterns per state in America](https://www.cdc.gov/sleep/images/datastatistics/Short_Sleep_US-Map_2014_Factsheets.jpg)  
 Figure 2: This graphic shows the sleep deprivation statistic of each state in the U.S. In our project, we propose to create a similar information visualization and allow users to explore state-level details.
 
 ## 5.0 Team Coordination
