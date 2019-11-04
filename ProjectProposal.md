@@ -80,9 +80,9 @@ This graph shows the sleep deprivation statistic of each state in the U.S. In ou
 ### Individual goals/roles:
 **Jocelyn:**  
 - **Goals**:  
- Gather and analyze data on a topic of which the resulting analytics can benefit society and provide interesting results. Also, I’d like to produce the findings on Github in such a way that it may be displayed as a project on my resume or Linkedin profile.
-
-- **Roles**:  
+ Gather and analyze data on a topic of which the resulting analytics can benefit society and provide interesting results. Also, I’d like to produce the findings on Github in such a way that it may be displayed as a project on my resume or Linkedin profile. 
+ 
+- **Roles**: data organizer, coder, and designer. 
 
 **Rae**:   
 - **Goals**:  
