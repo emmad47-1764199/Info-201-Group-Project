@@ -1,4 +1,4 @@
-# The Importance of Sleep
+# The Importance of Sleep on Health, Occupation, and Wellbeing
 ### Project:
 Why sleep when there’s Netflix?
 
@@ -20,7 +20,7 @@ Autumn 2019
 
 >Sleep is essential for human survival, success, and maintaining the balance for overall health yet so many still don’t view sleep as a basic human right. As a result, this study will look at the relationship between sleep and overall success. Sleep is a major part of health and wellbeing yet many policies surrounding poverty and workers rights don't take into account this value. This factor then raises questions on what we value and deem as important.
 
-**What is the problem?**
+**1.2 What is the problem?**
 
 >Approximately one-third of the American population does not get enough sleep, yet a lack of sleep can have serious effects such as poor physical and mental health (Marcin 2017). Oftentimes, people prioritize other responsibilities, such as work, school, exercise and socialization over sleep, but at a certain level of lack of sleep, performance in these tasks are diminished. This study will assess the tradeoff between getting enough sleep and accomplishing these other activities.  
 
@@ -40,7 +40,7 @@ Autumn 2019
 
 ## 3.0 Possible Data Sets
 
-### American College Health Association - National College Health Assessment
+### *American College Health Association - National College Health Assessment*
 
 **Description:**  
 The ACHA-National College Health Assessment is a nationally recognized research survey that covers a wide range of health issues about college students. It has large enough polls and provides sufficient evidence for the correlation between college students’ academic performance and several factors.
@@ -52,7 +52,7 @@ https://www.acha.org/NCHA/ACHA-NCHA_Data/Publications_and_Reports/NCHA/Data/Repo
 **Attributes:** 66
 
 
-### 2008 Sleep, Performance and the Workplace
+### *2008 Sleep, Performance and the Workplace*
 
 **Description:**   
 A nationwide survey of Americans conducted by the National Sleep Foundation on how much sleep they get and how it effects their daily lives with tasks such as work, driving, sex life, and life at home.
@@ -66,13 +66,12 @@ https://www.sleepfoundation.org/professionals/sleep-america-polls/2008-sleep-per
 ## 4.0 Information Visualizations
 
 ![A data visual of sleep patterns in college students](images/collegeVisual.jpg)  
-This graphic shows statistics specific to students about their sleeping habits and why they have them. We plan to make a similar visualization representing sleep correlations with specific jobs, education, and salaries. In our project, we would like to implement something similar.
+Figure 1: This graphic shows statistics specific to students about their sleeping habits and why they have them. We plan to make a similar visualization representing sleep correlations with specific jobs, education, and salaries. In our project, we would like to implement something similar.
 
 ![A data visual of sleep patterns per state in America](images/StateVisual.png)  
-This graph shows the sleep deprivation statistic of each state in the U.S. In our project, we propose to create a similar information visualization and allow users to explore state-level details.
+Figure 2: This graphic shows the sleep deprivation statistic of each state in the U.S. In our project, we propose to create a similar information visualization and allow users to explore state-level details.
 
-
-## Team Coordination
+## 5.0 Team Coordination
 
 **Weekly Meeting Time:** Thursday 3:30 - 5:30 P.M.  
 **Source:** https://www.when2meet.com/?8325592-N2c2A
@@ -80,17 +79,17 @@ This graph shows the sleep deprivation statistic of each state in the U.S. In ou
 ### Individual goals/roles:
 **Jocelyn:**  
 - **Goals**:  
- Gather and analyze data on a topic of which the resulting analytics can benefit society and provide interesting results. Also, I’d like to produce the findings on Github in such a way that it may be displayed as a project on my resume or Linkedin profile. 
- 
-- **Roles**: data organizer, coder, and designer. 
+ Gather and analyze data on a topic of which the resulting analytics can benefit society and provide interesting results. Also, I’d like to produce the findings on Github in such a way that it may be displayed as a project on my resume or Linkedin profile.
+
+- **Roles**: data organizer, coder, and designer.
 
 **Rae**:   
 - **Goals**:  
 Explore how important the role of sleeping could be for everyone's life and acknowledge myself its importance as I really have trouble dealing with sleeping. Manage the skill playing with data, especially data visualization, which is the topic I've been interested for so long. I hope our project could be presented beautifully to other people at the very end.
 
-- **Roles**:  
+- **Roles**:  Present the dat a in a meaningful and understandable fashion.
 
-**Balqisa:** Present the data in a meaningful and understandable fashion.
+**Balqisa**:
 
 - **Goals**: Produce good quality work and gain relevant data science skills.
 
@@ -105,13 +104,17 @@ Explore how important the role of sleeping could be for everyone's life and ackn
 >At our group meeting every week, we decide who needs to do what tasks by a certain deadline. We then use a group chat to communicate whenever there are any questions or concerns along the way.
 
 ### Commitment on feedback, teamwork, communication  and challenges:
->
+> We have a commitment to be honest with each other and to give critical feedback in a kind manner and to ensure that we continue to give feedback, we have decided that at the end of each meeting we will start off by each commenting on something that we could do better as a group and then each commenting on something that we like about what we have done so far with our project.
 
+## 6.0 Questions for Teaching Team
+> First of all, we are open to any suggestions that you have for our project.
+> In addition, how do we do hanging indents for our references in markdown?
 
-## References:  
-- Marcin (2017, June 27). 10 Things That Happen to Your Body When You Lose Sleep. Healthline. Retrieved from https://www.healthline.com/health/healthy-sleep/what-happens-to-your-body-when-you-lose-sleep
-- Author not listed (2018, May 30). Why lack of sleep is bad for your health. NHS. Retrieved from https://www.nhs.uk/live-well/sleep-and-tiredness/why-lack-of-sleep-is-bad-for-your-health/
-- Author not Listed (2019). About ACHA-NCHA. ACHA-NCHA. Retrieved from
+## 7.0 References:  
+-  [1] Marcin (2017, June 27). 10 Things That   Happen to Your Body When You Lose Sleep. Healthline. Retrieved from https://www.healthline.com/health/healthy-sleep/what-happens-to-your-body-when-you-lose-sleep
+- [2] Author not listed (2018, May 30). Why lack
+  of sleep is bad for your health. NHS. Retrieved from https://www.nhs.uk/live-well/sleep-and-tiredness/why-lack-of-sleep-is-bad-for-your-health/
+- [3] Author not Listed (2019). About ACHA-NCHA. ACHA-NCHA. Retrieved from
 https://www.acha.org/NCHA/About_ACHA_NCHA/Overview/NCHA/About/About_NCHA.aspx?hkey=75eaa64f-e82c-4cfd-a19c-4e3f9bf126ee
 - Author not Listed (2019, August 19). NCHA-II_SPRING_2019_US_REFERENCE_GROUP_DATA_REPORT. ACHA-NCHA. Retrieved from
 https://www.acha.org/documents/ncha/NCHA-II_SPRING_2019_US_REFERENCE_GROUP_DATA_REPORT.pdf
