@@ -22,7 +22,7 @@ Autumn 2019
 
 **What is the problem?**
 
->Approximately one-third of the American population does not get enough sleep, yet a lack of sleep can have serious effects such as poor physical and mental health (Healthline 1). Oftentimes, people prioritize other responsibilities, such as work, school, exercise and socialization over sleep, but at a certain level of lack of sleep, performance in these tasks are diminished. This study will assess the tradeoff between getting enough sleep and accomplishing these other activities.  
+>Approximately one-third of the American population does not get enough sleep, yet a lack of sleep can have serious effects such as poor physical and mental health (Marcin 2017). Oftentimes, people prioritize other responsibilities, such as work, school, exercise and socialization over sleep, but at a certain level of lack of sleep, performance in these tasks are diminished. This study will assess the tradeoff between getting enough sleep and accomplishing these other activities.  
 
 **1.3 Why does it matter?**
 
@@ -30,7 +30,7 @@ Autumn 2019
 
 **1.4 How will it be addressed?**
 
->In the study, “success” will be broken down into different factors such as Health(life length), Happiness(life satisfaction), Confidence Level, Salary Level, Education Level, GPA, Extracurricular Activity, etc. Looking at how sleep affects these factors of “success” will allow us to address whether or not sleep affects performance levels in these areas. The study will gather data by using pre-existing datasets surrounding sleep.
+>In the study, “success” will be broken down into different factors such as Health (life length), Happiness (life satisfaction), Confidence Level, Salary Level, Education Level, GPA, Extracurricular Activity, etc. Looking at how sleep affects these factors of “success” will allow us to address whether or not sleep affects performance levels in these areas. The study will gather data by using pre-existing datasets surrounding sleep.
 
 ## 2.0 Research Questions
 
@@ -86,20 +86,20 @@ This graph shows the sleep deprivation statistic of each state in the U.S. In ou
 
 **Rae**:   
 - **Goals**:  
-Explore how important the role of sleeping could be for everyone's life and acknowledge myself its importantce as I really have trouble dealing with sleeping. Manage the skill playing with data, especially data visualization, which is the topic I've been interested for so long. I hope our project could be presented beautifully to other people at the very end.
+Explore how important the role of sleeping could be for everyone's life and acknowledge myself its importance as I really have trouble dealing with sleeping. Manage the skill playing with data, especially data visualization, which is the topic I've been interested for so long. I hope our project could be presented beautifully to other people at the very end.
 
 - **Roles**:  
 
-**Balqisa:**
+**Balqisa:** Present the data in a meaningful and understandable fashion.
 
 - **Goals**: Produce good quality work and gain relevant data science skills.
 
-- **Roles**:
+- **Roles**: Primarily researching to find both reliable data for our study and other sources to understand the stake of the sleep problem around the world.
 
 **Emma**:
 - **Goals**: Analyze and present data in a way that can have an impact on the way my audience values sleep and have a deeper understanding myself about the importance of sleep.
 
-- **Roles**:
+- **Roles**: Focus on analyzing data to learn the correlation between sleep, health, and happiness.
 
 ### Weekly Communication Commitment:
 >At our group meeting every week, we decide who needs to do what tasks by a certain deadline. We then use a group chat to communicate whenever there are any questions or concerns along the way.
