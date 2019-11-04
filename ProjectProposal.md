@@ -116,8 +116,8 @@ Explore how important the role of sleeping could be for everyone's life and ackn
   of sleep is bad for your health. NHS. Retrieved from https://www.nhs.uk/live-well/sleep-and-tiredness/why-lack-of-sleep-is-bad-for-your-health/
 - [3] Author not Listed (2019). About ACHA-NCHA. ACHA-NCHA. Retrieved from
 https://www.acha.org/NCHA/About_ACHA_NCHA/Overview/NCHA/About/About_NCHA.aspx?hkey=75eaa64f-e82c-4cfd-a19c-4e3f9bf126ee
-- Author not Listed (2019, August 19). NCHA-II_SPRING_2019_US_REFERENCE_GROUP_DATA_REPORT. ACHA-NCHA. Retrieved from
+- [4] Author not Listed (2019, August 19). NCHA-II_SPRING_2019_US_REFERENCE_GROUP_DATA_REPORT. ACHA-NCHA. Retrieved from
 https://www.acha.org/documents/ncha/NCHA-II_SPRING_2019_US_REFERENCE_GROUP_DATA_REPORT.pdf
-- Author not Listed (2008). 2008 Sleep, Performance and the Workplace. National Sleep Foundation. Retrieved from https://www.sleepfoundation.org/professionals/sleep-america-polls/2008-sleep-performance-and-workplace
-- Author not Listed (2017, May 2). Sleep and Sleep Disorders - Data & Statistics. CDC. Retrieved from
+- [5] Author not Listed (2008). 2008 Sleep, Performance and the Workplace. National Sleep Foundation. Retrieved from https://www.sleepfoundation.org/professionals/sleep-america-polls/2008-sleep-performance-and-workplace
+- [6] Author not Listed (2017, May 2). Sleep and Sleep Disorders - Data & Statistics. CDC. Retrieved from
 https://www.cdc.gov/sleep/data_statistics.html
