@@ -65,10 +65,10 @@ https://www.sleepfoundation.org/professionals/sleep-america-polls/2008-sleep-per
 
 ## 4.0 Information Visualizations
 
-![A data visual of sleep patterns in college students](images/collegeVisual.jpg)  
+![A data visual of sleep patterns in college students](https://i.pinimg.com/originals/8a/2b/bc/8a2bbcdfc909555e43d136caf5e79795.jpg)  
 Figure 1: This graphic shows statistics specific to students about their sleeping habits and why they have them. We plan to make a similar visualization representing sleep correlations with specific jobs, education, and salaries. In our project, we would like to implement something similar.
 
-![A data visual of sleep patterns per state in America](images/StateVisual.png)  
+![A data visual of sleep patterns per state in America](https://www.cdc.gov/sleep/images/datastatistics/Short_Sleep_US-Map_2014_Factsheets.jpg)  
 Figure 2: This graphic shows the sleep deprivation statistic of each state in the U.S. In our project, we propose to create a similar information visualization and allow users to explore state-level details.
 
 ## 5.0 Team Coordination
@@ -117,13 +117,14 @@ Focus on analyzing data to learn the correlation between sleep, health, and happ
 > In addition, how do we do hanging indents for our references in markdown?
 
 ## 7.0 References:  
--  [1] Marcin (2017, June 27). 10 Things That   Happen to Your Body When You Lose Sleep. Healthline. Retrieved from https://www.healthline.com/health/healthy-sleep/what-happens-to-your-body-when-you-lose-sleep
+-  [1] Marcin (2017, June 27). 10 Things That   Happen to Your Body When You Lose Sleep. _Healthline_. Retrieved from https://www.healthline.com/health/healthy-sleep/what-happens-to-your-body-when-you-lose-sleep
 - [2] Author not listed (2018, May 30). Why lack
-  of sleep is bad for your health. NHS. Retrieved from https://www.nhs.uk/live-well/sleep-and-tiredness/why-lack-of-sleep-is-bad-for-your-health/
-- [3] Author not Listed (2019). About ACHA-NCHA. ACHA-NCHA. Retrieved from
+  of sleep is bad for your health. _NHS_. Retrieved from https://www.nhs.uk/live-well/sleep-and-tiredness/why-lack-of-sleep-is-bad-for-your-health/
+- [3] Author not Listed (2019). About ACHA-NCHA. _ACHA-NCHA_. Retrieved from
 https://www.acha.org/NCHA/About_ACHA_NCHA/Overview/NCHA/About/About_NCHA.aspx?hkey=75eaa64f-e82c-4cfd-a19c-4e3f9bf126ee
-- [4] Author not Listed (2019, August 19). NCHA-II_SPRING_2019_US_REFERENCE_GROUP_DATA_REPORT. ACHA-NCHA. Retrieved from
+- [4] Author not Listed (2019, August 19). NCHA-II_SPRING_2019_US_REFERENCE_GROUP_DATA_REPORT. _ACHA-NCHA_. Retrieved from
 https://www.acha.org/documents/ncha/NCHA-II_SPRING_2019_US_REFERENCE_GROUP_DATA_REPORT.pdf
-- [5] Author not Listed (2008). 2008 Sleep, Performance and the Workplace. National Sleep Foundation. Retrieved from https://www.sleepfoundation.org/professionals/sleep-america-polls/2008-sleep-performance-and-workplace
-- [6] Author not Listed (2017, May 2). Sleep and Sleep Disorders - Data & Statistics. CDC. Retrieved from
+- [5] Author not Listed (2008). 2008 Sleep, Performance and the Workplace. _National Sleep Foundation_. Retrieved from https://www.sleepfoundation.org/professionals/sleep-america-polls/2008-sleep-performance-and-workplace
+- [6] Author not Listed (2017, May 2). Sleep and Sleep Disorders - Data & Statistics. _CDC_. Retrieved from
 https://www.cdc.gov/sleep/data_statistics.html
+- [7] Axton-Schock. Effects of Sleep Deprivation on Health. _Pinterest_. Retrieved from https://www.pinterest.com/pin/550002173225650417/?lp=true
