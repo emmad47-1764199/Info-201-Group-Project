@@ -85,7 +85,7 @@ Gather and analyze data on a topic of which the resulting analytics can benefit 
 - **Roles**:  
 
 **Rae**:   
-- **Goals**:
+- **Goals**:  
 Explore how important the role of sleeping could be for everyone's life and acknowledge myself its importantce as I really have trouble dealing with sleeping. Manage the skill playing with data, especially data visualization, which is the topic I've been interested for so long. I hope our project could be presented beautifully to other people at the very end.
 
 - **Roles**:  
