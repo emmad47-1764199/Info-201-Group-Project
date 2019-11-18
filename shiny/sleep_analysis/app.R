@@ -38,9 +38,17 @@ ui <- fluidPage(
             htmlOutput("about")
         ),
         
+        tabPanel(
+            "Select Book List",
+            sidebarLayout(
+                sidebarPanel(
+                    selectInput("book_cat_select",
+                                label = h3("Select Book Category"),
+                                choices = select_input_list,
+                                selected = "hardcover-nonfiction"
+                    )
+                ),
         
-        
-        # Show a plot of the generated distribution
         mainPanel(
          
         )
