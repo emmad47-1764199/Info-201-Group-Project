@@ -39,7 +39,8 @@ ui <- fluidPage(
                   "https://www.sleepfoundation.org/professionals/sleep-america-polls/2008-sleep-performance-and-workplace"),
             "."
             )
-            
+            # image
+            # img("description", src = "path")
         ),
         
         tabPanel(
@@ -56,7 +57,7 @@ ui <- fluidPage(
         
         tabPanel(
             "Sleep and Workplace",
-            h2("Sleep and the WorkPlace"),
+            h2("Sleep and the Workplace"),
             br(),
             htmlOutput("sleep_workplace"),
         ),
