@@ -182,7 +182,7 @@ chance_5 <- hrs_income %>%
 
 diff_5_to_7 <- chance_7 - chance_5
 
-# hours of sleep correlated to stress levels ________________
+# hours of sleep correlated to stress levels (pain) ________________
 
 # Q6_HoursB
 # Q13_b
