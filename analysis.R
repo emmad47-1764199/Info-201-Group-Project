@@ -113,7 +113,7 @@ sleep_ranges <- sleep_ranges %>%
   )
 
 # create a pie chart
-ggplot(data = sleep_ranges) +
+sleep_freq_pie <- ggplot(data = sleep_ranges) +
   geom_bar(aes(x = "", y = per, fill = ranges),
     stat = "identity", width = 1
   ) +
@@ -157,7 +157,7 @@ income_level <- c(
 )
 
 # create a stacked bar chart
-graph_two_categoricals(
+income_vs_sleep_bar <- graph_two_categoricals(
   hrs, income_range, hrs_level,
   income_level,
   "Typical Workday Hours of Sleep
@@ -185,7 +185,7 @@ hrs2_level <- c(
 stress_level <- c("None", "Mild", "Moderate", "Severe", "Very Severe")
 
 # create a stacked bar chart
-graph_two_categoricals(
+stress_vs_sleep_bar <- graph_two_categoricals(
   hrs2, stress, hrs2_level, stress_level,
   "Typical Workday Hours of Sleep
                        Correlated to Stress",
