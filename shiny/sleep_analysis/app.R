@@ -7,7 +7,6 @@
 #    http://shiny.rstudio.com/
 #
 
-
 library(shiny)
 
 input_list <- c("career path", "education level", "health", "self-love")
@@ -29,6 +28,8 @@ ui <- fluidPage(
             "Introduction",
             htmlOutput("intro"),
             h2("Overview"),
+            p("Approximately one-third of the American population does not get enough sleep, yet a lack of sleep can have serious effects such as poor physical and mental health (Marcin 2017). Oftentimes, people prioritize other responsibilities, such as work, school, exercise and socialization over sleep, but at a certain level of lack of sleep, performance in these tasks are diminished. This study will assess the tradeoff between getting enough sleep and accomplishing these other activities.
+"),
             p("Use this application to learn about the 
               importance of sleep on health, work performance, and happiness."),
             p("This application uses the following two datasets: ",
