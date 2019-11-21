@@ -1,16 +1,18 @@
----
-title: |
-  | Technical Report:
-  | _"Why sleep when there’s Netflix?"_ ---
-  | The Importance of Sleep on Health, Occupation, and Wellbeing
-author: "Emma Dickenson, Balqisa Omar Hassan, Jocelyn Borovich, Rae Ouyang"
-date: | 
-  | Info-201: Technical Foundations of Informatics
-  | The Information School
-  | University of Washington
-  | Autumn 2019
----
-The technical report provides a complete description of the project.
+# _Why sleep when there’s Netflix?_ ---
+# The Importance of Sleep on Health, Occupation, and Wellbeing
+
+Info-201:
+Technical Foundations of Informatics  
+The Information School   
+University of Washington  
+Autumn 2019
+  
+Emma Dickenson,  
+Balqisa Omar Hassan,  
+Jocelyn Borovich,  
+Rae Ouyang
+
+##### The technical report provides a complete description of the project.
 
 <hr style="border: none; border-bottom: 3px solid grey;">
 
