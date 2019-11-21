@@ -23,7 +23,7 @@ translate <- function(col, level_col) {
 # Function that graphs two categorical variables based on given
 # information
 graph_two_categoricals <- function(x, fill, x_level, fill_level,
-                                   title, x_label, fill_label) {
+                                   title, x_label, fill_label, color) {
   fill <- translate(fill, fill_level)
 
   df <- data.frame(x, fill)
@@ -42,7 +42,8 @@ graph_two_categoricals <- function(x, fill, x_level, fill_level,
       x = x_label,
       y = "Percent of People"
     ) +
-    guides(fill = guide_legend(title = fill_label))
+    guides(fill = guide_legend(title = fill_label)) +
+    scale_fill_brewer(palette=color)
 }
 
 
@@ -115,7 +116,9 @@ ggplot(data = sleep_ranges) +
   nudge_x = 1
   ) +
   guides(fill = guide_legend(title = "Hrs of Sleep")) +
-  labs(title = "Typical Hours of Sleep on a Workday")
+  labs(title = "Typical Hours of Sleep on a Workday") +
+  scale_fill_brewer(palette="Purples")
+
 
 # Percent of people that get less than 8 hrs of sleep (79%)
 
@@ -155,7 +158,8 @@ graph_two_categoricals(
   "Typical Workday Hours of Sleep
                        Correlated to Income",
   "Hours of Sleep",
-  "Income Range"
+  "Income Range", 
+  "Greens"
 )
 
 # Interesting stat, chance of making more than 75,000 on 5 and 8
@@ -206,7 +210,8 @@ graph_two_categoricals(
   "Typical Workday Hours of Sleep
                        Correlated to Stress",
   "Hours of Sleep",
-  "Typical Stress Level"
+  "Typical Stress Level",
+  "Reds"
 )
 
 # #Symptoms from lack of sleep in the workplace bar chart
