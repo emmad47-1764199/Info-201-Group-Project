@@ -5,4 +5,4 @@ Contributors: Balqisa Omar Hassan, Emma Dickenson, Jocelyn Borovich, and Rae Ouy
 
 See our [project proposal](https://github.com/emmad47-1764199/Info-201-Group-Project/wiki/Project-Proposal)  
   
-See our [technical report]()
+See our [technical report](https://github.com/emmad47-1764199/Info-201-Group-Project/wiki/Technical-Report)
