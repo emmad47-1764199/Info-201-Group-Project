@@ -1,4 +1,4 @@
-# _Why sleep when there’s Netflix?_ 
+# _Why sleep when there’s Netflix?_
 # The Importance of Sleep on Health, Occupation, and Wellbeing
 
 Info-201:
@@ -6,7 +6,7 @@ Technical Foundations of Informatics
 The Information School   
 University of Washington  
 Autumn 2019
-  
+
 Emma Dickenson,  
 Balqisa Omar Hassan,  
 Jocelyn Borovich,  
@@ -28,7 +28,7 @@ Approximately one-third of the American population does not get enough sleep, ye
 Sleep is essential to human life. Therefore, it should be prioritized to people so they can enjoy their lives at full potential. According to NHS, without the right amount of sleep people experience short term effects such as short tempers, lack of focus, and fatigue. They can also experience numerous long term effects including depression, anxiety, obesity, heart disease, and shortened life expectancy. When people suffer these consequences, it affects their daily life in many places such as relationships, work ethic, performance, and even overall self love and confidence.
 
 #### 1.4 How will it be addressed?
-Looking at how sleep affects factors of “success” will allow us to address whether or not sleep also affects performance levels in these areas. The study will gather data from American adults in the workforce by using pre-existing datasets surrounding sleep and will use data wrangling methods to optimize research goals. We will be cleaning and restructuring raw data in order to understand more about sleep. Furthermore, we will utilize the data and create information visualization that will represent and reflect our findings. 
+Looking at how sleep affects factors of “success” will allow us to address whether or not sleep also affects performance levels in these areas. The study will gather data from American adults in the workforce by using pre-existing datasets surrounding sleep and will use data wrangling methods to optimize research goals. We will be cleaning and restructuring raw data in order to understand more about sleep. Furthermore, we will utilize the data and create information visualization that will represent and reflect our findings.
 
 <hr style="border: none; border-bottom: 3px solid grey;">
 
@@ -59,7 +59,7 @@ Sleep, Performance and the Workplace is a Nationwide telephone interview conduct
 **Strength**:  
 The size of both datasets. Both datasets included over 1000 observations. Although, even larger datasets could have made our analysis even more precise, 1000 observations is large enough to allow us to draw conclusions from the data. In addition, since both datasets had about 200 variables, we were able to answer our research questions in depth as we had lots of data to explore.  
 **Weakness**:  
-First, there is no continuous data in both datasets, so it is impossible to compare two variables graphically through scatterplots. For example, a scatter plot could have been used to compare income to number of hours of sleep per night; if instead of being recorded as a range, income was recorded by exact amount. In both datasets, all of the questions asked to the participants required categorical responses. Second, there exist bias in the method of data collection of both datasets. The data was collected through phone interviews. Certain groups of people may have been less willing to participate or be truthful than others, which may have skewed the data. 
+First, there is no continuous data in both datasets, so it is impossible to compare two variables graphically through scatterplots. For example, a scatter plot could have been used to compare income to number of hours of sleep per night; if instead of being recorded as a range, income was recorded by exact amount. In both datasets, all of the questions asked to the participants required categorical responses. Second, there exist bias in the method of data collection of both datasets. The data was collected through phone interviews. Certain groups of people may have been less willing to participate or be truthful than others, which may have skewed the data.
 
 #### 3.2.1. Strength and Weakness employing the Envisioning Cards
 **Strengths** -- **Non-targeted Use**:  
@@ -69,7 +69,7 @@ We choose the Envisioning Card "Adaptation" to clarify the weakness of our datas
 
 #### 3.3 Description of Data Wrangling
 First looking at the raw data sets comes across as quite confusing and overwhelming. To make the data more readable and help find what we were looking for, we scrolled through the questionnaire provided taking notes of the specific questions that were of interest to analyze. Once all questions of interest where found, we read their corresponding responses from the raw data in R and analyzed different patterns and statistics. After selecting our columns of interest, we filtered out all the N/A values and trimmed the data to exclude extreme outliers such as 2 people saying they average 1 hour of sleep. In doing this we simply used a range of values as the filter. As shown in the data dictionary in the appendix, all N/A values are integers 95-99 and 00 and there is most definitely not more than 94 multiple choice options for any given question. For outliers we simply graphed the frequencies of the values and trimmed the data with ranges accordingly. Therefore, trimming out outliers and N/A values came quite simple.  
-\*_Variable we filtered for the project - see Appendix 1_\*
+*_Variable we filtered for the project - see Appendix 1_*
 
 <hr style="border: none; border-bottom: 3px solid grey;">
 
@@ -85,12 +85,12 @@ For the shiny application, our two datasets will be loaded as .csv files. For th
 <hr style="border: none; border-bottom: 3px solid grey;">
 
 ### 6.0 Conclusion
-As our research surrounds sleep and success, we have been very fortunate to have the ability to use pre-existing data. Sleep is a topic that intrigues many researchers and as a result there is an abundance of sleep data that we are able to access for our project. Although there is this abundance, as students we struggled with gaining access to certain data sets that perhaps could have elevated our project. The time constraint of this project also hindered our ability to gather our own data set. In the future we hope to look at UW students and how sleep affects things such as GPA, happiness and perception. 
+As our research surrounds sleep and success, we have been very fortunate to have the ability to use pre-existing data. Sleep is a topic that intrigues many researchers and as a result there is an abundance of sleep data that we are able to access for our project. Although there is this abundance, as students we struggled with gaining access to certain data sets that perhaps could have elevated our project. The time constraint of this project also hindered our ability to gather our own data set. In the future we hope to look at UW students and how sleep affects things such as GPA, happiness and perception.
 
 <hr style="border: none; border-bottom: 3px solid grey;">
 
 ### Acknowledgements
-We would like to express our gratitude to our teaching assistant, Benji Xie. Throughout the quarter, Benji has been at the forefront of our project, providing us both advice and guidance on the direction our research should go. 
+We would like to express our gratitude to our teaching assistant, Benji Xie. Throughout the quarter, Benji has been at the forefront of our project, providing us both advice and guidance on the direction our research should go.
 
 <hr style="border: none; border-bottom: 3px solid grey;">
 
@@ -101,7 +101,7 @@ We would like to express our gratitude to our teaching assistant, Benji Xie. Thr
 [4] Author not Listed (2019, August 19). NCHA-II_SPRING_2019_US_REFERENCE_GROUP_DATA_REPORT. ACHA-NCHA. Retrieved from https://www.acha.org/documents/ncha/NCHA-II_SPRING_2019_US_REFERENCE_GROUP_DATA_REPORT.pdf <br/>
 [5] Author not Listed (2008). 2008 Sleep, Performance and the Workplace. National Sleep Foundation. Retrieved from https://www.sleepfoundation.org/professionals/sleep-america-polls/2008-sleep-performance-and-workplace <br/>
 [6] Author not Listed (2017, May 2). Sleep and Sleep Disorders - Data & Statistics. CDC. Retrieved from https://www.cdc.gov/sleep/data_statistics.html <br/>
-[7] Axton-Schock. Effects of Sleep Deprivation on Health. Pinterest. Retrieved from https://www.pinterest.com/pin/550002173225650417/?lp=true 
+[7] Axton-Schock. Effects of Sleep Deprivation on Health. Pinterest. Retrieved from https://www.pinterest.com/pin/550002173225650417/?lp=true
 
 <hr style="border: none; border-bottom: 3px solid grey;">
 <hr style="border: none; border-bottom: 3px solid grey;">
@@ -124,21 +124,21 @@ Q13_b | Multiple choice question: <br> **_"In the past 7 days, how would you rat
 
 ## Appendix 2: Reflections
 Emma Dickenson:  
-Through the first part of the project, I learned to get comfortable with shiny. Through my learning, I was able to develop important skills as a coder such as finding resources to help me complete tasks that I was not yet taught in class. Another skill that I learned was looking at other code, such as our class demos, to get a head start on my own code.
+Through the first part of the project, I learned to get comfortable with shiny. Through my learning, I was able to develop important skills as a coder such as finding resources to help me complete tasks that I was not yet taught in class. Another skill that I learned was looking at other code, such as our class demos, to get a head start on my own code. It was difficult learning both how to program with shiny while also learning techniques to build a strong web application, but very much worthwhile. I am very excited to apply what I have learned.
 <br/>
 
 Balqisa Omar Hassan:  
-This week I focused on developing and honing our research questions. It was very difficult to come up with potential questions that was relevant to the data sets we collected. Something that was satisfying was being able to meet with the group and make excellent progress on our project. While we are also confused and frustrated initially, we were able to produce work that we are proud of. As a thinker, this project really pushed me to be more open minded and accepting of change and the idea of potentially every detail and aspect not going as planned. 
+This week I focused on developing and honing our research questions. It was very difficult to come up with potential questions that was relevant to the data sets we collected. Something that was satisfying was being able to meet with the group and make excellent progress on our project. While we are also confused and frustrated initially, we were able to produce work that we are proud of. As a thinker, this project really pushed me to be more open minded and accepting of change and the idea of potentially every detail and aspect not going as planned.
 <br/>
 
 Jocelyn Borovich:  
-Throughout the beginning of this project, I definitely got much more comfortable working with different ways to visualize and read data with ggplot. During this process, I not only used the class textbook to learn more about the plots. I also developed skills in using the internet to combine different solutions together to form the final product that I wanted that goes beyond what is presented in class. I found creating the pie chart very frustrating as the data I was working with had to be arranged and changed in specific ways as well as needing different pieces of code from different places to satisfy a nice looking pie chart. 
+Throughout the beginning of this project, I definitely got much more comfortable working with different ways to visualize and read data with ggplot. During this process, I not only used the class textbook to learn more about the plots. I also developed skills in using the internet to combine different solutions together to form the final product that I wanted that goes beyond what is presented in class. I found creating the pie chart very frustrating as the data I was working with had to be arranged and changed in specific ways as well as needing different pieces of code from different places to satisfy a nice looking pie chart.
 <br/>
 
 Rae Ouyang:  
-This project really teaches me what is teamwork and how great a thing could be achieved when several people get toghther and heading toward the same goal. By participating in this project, I have learnt a lot of things I don't think I can learn alone from lecture. For example, many detailing coding skill and the skill of dividing a big task into several small tasks (which would make completing the big task much more easier).
+This project really teaches me what is teamwork and how great a thing could be achieved when several people get together and heading toward the same goal. By participating in this project, I have learnt a lot of things I don't think I can learn alone from lecture. For example, many detailing coding skill and the skill of dividing a big task into several small tasks (which would make completing the big task much more easier).
 
 <hr style="border: none; border-bottom: 3px solid grey;">
 
 ## Appendix 3: Use of Envisioning Cards
-Based on our research question, we picked two envisioning cards: 1.Work of the Future, 2.Long-Term Health and Well-Being. Each envisioning card corresponds to each research question. When tried to make use of these cards, we viewed our project as a product that would be used by our customers. For example, people who browse our website due to curiosity or willing to learn more about sleeping. For “Work of the Future”, we consider our research project would help improve the way people work by disclosing to them how sleep functioning in their work performance. In today’s workforce, employees always willing to dedicate more time, even including their personal sleeping time to work. However, after viewing our project, employees would realize spending more time on work by no means better and more things would be done--without good and enough rest, they may just wasting their time. For “Long-Term Health and Well-Being”, we believe as we released how the amount of sleep get correlate to people’s overall health and self-love and happiness in our project, our “customers” would realize the importance of sleep to their long-term health and well-being and thus would pay more attention to having a good sleep habit and schedule.
+Based on our research question, we picked two envisioning cards: 1. Work of the Future, 2. Long-Term Health and Well-Being. Each envisioning card corresponds to each research question. When tried to make use of these cards, we viewed our project as a product that would be used by our customers. For example, people who browse our website due to curiosity or willing to learn more about sleeping. For “Work of the Future”, we consider our research project would help improve the way people work by disclosing to them how sleep functioning in their work performance. In today’s workforce, employees always willing to dedicate more time, even including their personal sleeping time to work. However, after viewing our project, employees would realize spending more time on work by no means better and more things would be done--without good and enough rest, they may just wasting their time. For “Long-Term Health and Well-Being”, we believe as we released how the amount of sleep get correlate to people’s overall health and self-love and happiness in our project, our “customers” would realize the importance of sleep to their long-term health and well-being and thus would pay more attention to having a good sleep habit and schedule.
