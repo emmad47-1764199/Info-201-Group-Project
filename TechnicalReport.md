@@ -1,4 +1,4 @@
-# _Why sleep when there’s Netflix?_ ---
+# _Why sleep when there’s Netflix?_ 
 # The Importance of Sleep on Health, Occupation, and Wellbeing
 
 Info-201:
@@ -76,27 +76,6 @@ First looking at the raw data sets comes across as quite confusing and overwhelm
 ### 4.0 Information Visualizations
 #### Description:
 The data visualized aims to create images that portray the effects of sleep on health as well as  performance in the workplace. The visual of stress vs sleep aims to answer questions about how sleep is correlated to health as the visual of income vs sleep aims to answer questions about how sleep is correlated with work performance. In visualizing the data sets we had to be aware that all of our data is categorical due to a multiple choice survey. We decided to use the stacked bar chart to portray comparisons between the two categorical variables. Furthermore, these charts use a percentage based frequency rather than count on the y-axis. This makes the visual more readable and accurate despite different amounts of people reporting various hours of sleep. The color scales use a fade from light to dark which helps portray the variables from least to greatest.
-
-<br/>
-
-#### 4.1
-![income vs sleep](images/income_vs_sleep.png)
-<br/>
-This graphic shows a stacked bar chart of people’s typical hours of sleep correlated to their household income.  As shown, there is a steady increase in income per extra hour of sleep a person gets. It can be concluded that at 4 hours of sleep a night, 50% of people make over $50,000 a year, but at 9 hours of sleep, about 85% of people make over $50,000 a year. Therefore, with an extra 5 hrs of sleep a night, you have a 35% higher chance of making more than $50,000 a year. 
-
-<br/>
-
-#### 4.2
-![stress vs sleep](images/stress_vs_sleep.png)
-<br/>
-This graphic shows a stacked bar chart of people’s typical hours of sleep correlated to their stress levels.  As shown in the chart, there is a trend of getting nearly 7 hours of sleep a night corresponding to much lower severe stress symptoms. As sleep time decreases and increases below 5 and above 10, severe stress levels rise. It can be concluded that with 4 hours of sleep a night, about 25% of people experience severe stress symptoms, but at 7/8 hours, only about 10% of people experience these symptoms. Therefore, adding 4/5 hours of sleep decreases chances of severe stress by 15%.
-
-<br/>
-
-#### 4.3
-![typical sleep](images/Typical_sleep.png)
-<br/>
-This graphic displays a pie chart of the proportion of people that get various hours of sleep on workdays. From the chart it can be concluded that over 75% of people average less than 8 hours of sleep on work nights. 
 
 <hr style="border: none; border-bottom: 3px solid grey;">
 
