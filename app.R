@@ -29,7 +29,7 @@ ui <- fluidPage(
     # individual pages
     intro_page,
 
-    importance_page,
+    findings_page,
 
     sleep_and_workplace_page,
 

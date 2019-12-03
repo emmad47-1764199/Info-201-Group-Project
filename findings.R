@@ -1,5 +1,5 @@
-importance_page <- tabPanel(
-  "Importance",
+findings_page <- tabPanel(
+  "Findings",
   htmlOutput("importance"),
   sidebarLayout(
     sidebarPanel(
