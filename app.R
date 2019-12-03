@@ -8,6 +8,7 @@
 #
 
 library(shiny)
+library(shinythemes)
 source("analysis.R")
 
 input_list <- c("career path", "education level", "health", "self-love")
@@ -166,6 +167,8 @@ about_us_page <- tabPanel(
 )
 
 ui <- fluidPage(
+  
+  theme = shinytheme("cyborg"),
 
   # Application title
   titlePanel("The Importance of Sleep"),
