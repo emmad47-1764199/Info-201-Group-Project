@@ -8,6 +8,7 @@ sleep_and_health_page <-  tabPanel(
     ),
     mainPanel(
       plotOutput(outputId = "stress_graph"),
+      textOutput(outputId = "health_text"),
       p("This graphic displays a stacked bar chart of people's typical
             hours of sleep correlated to their stress levels.  As shown in
             the chart, there is a trend of getting nearly 7 hours of sleep

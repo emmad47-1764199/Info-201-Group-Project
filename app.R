@@ -8,16 +8,20 @@
 #
 
 library(shiny)
-# library(shinythemes)
+library(shinythemes)
 source("analysis.R")
 source("introduction.R")
 source("findings.R")
 source("Sleep_and_Work.R")
 source("Sleep_and_Health.R")
 source("about_us.R")
+source("captions.R")
 
 
 ui <- fluidPage(
+  
+  # Theme
+  theme = shinytheme("cyborg"),
   
   # Application title
   titlePanel("The Importance of Sleep"),
