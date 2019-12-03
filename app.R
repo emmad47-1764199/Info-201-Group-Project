@@ -15,23 +15,13 @@ get_text_from_md_file <- function(fn) {
   return(div(HTML(markdown::markdownToHTML(fn))))
 }
 
-ui <- fluidPage(
-
-  # Application title
-  titlePanel("The Importance of Sleep"),
-
-  # tabs at the top
-  tabsetPanel(
-    type = "tabs", id = "nav_bar",
-
-    # individual page
-    tabPanel(
-      "Introduction",
-      htmlOutput("intro"),
-      sidebarLayout(
-        sidebarPanel(
-          h2("Overview"),
-          p("Approximately one-third of the American population does not
+intro_page <- tabPanel(
+  "Introduction",
+  htmlOutput("intro"),
+  sidebarLayout(
+    sidebarPanel(
+      h2("Overview"),
+      p("Approximately one-third of the American population does not
             get enough sleep, yet a lack of sleep can have serious effects
             such as poor physical and mental health (Marcin 2017).
             Oftentimes, people prioritize other responsibilities, such as
@@ -40,41 +30,41 @@ ui <- fluidPage(
             diminished. This study will assess the tradeoff between getting
             enough sleep and accomplishing these other activities.
 "),
-          p("Use this application to learn about the
+      p("Use this application to learn about the
               importance of sleep on health, work performance, and
               happiness."),
-          p(
-            "This application uses the following two datasets: ",
-            a("2015 Sleep and Pain",
-              href =
-                "https://www.sleepfoundation.org/professionals/sleep-america-polls/2015-sleep-and-pain"
-            ),
-            " and ",
-            a("2008 Sleep Performance and the Workplace",
-              href =
-                "https://www.sleepfoundation.org/professionals/sleep-america-polls/2008-sleep-performance-and-workplace"
-            ),
-            "."
-          )
+      p(
+        "This application uses the following two datasets: ",
+        a("2015 Sleep and Pain",
+          href =
+            "https://www.sleepfoundation.org/professionals/sleep-america-polls/2015-sleep-and-pain"
         ),
-        mainPanel(
-          plotOutput(outputId = "sleep_pie"),
-          p("This graphic displays a pie chart of the proportion of people
+        " and ",
+        a("2008 Sleep Performance and the Workplace",
+          href =
+            "https://www.sleepfoundation.org/professionals/sleep-america-polls/2008-sleep-performance-and-workplace"
+        ),
+        "."
+      )
+    ),
+    mainPanel(
+      plotOutput(outputId = "sleep_pie"),
+      p("This graphic displays a pie chart of the proportion of people
             that get various hours of sleep on workdays. From the chart it
             can be concluded that over 75% of people average less than 8
             hours of sleep on work nights.
 ")
-        )
-      ),
-    ),
+    )
+  ),
+)
 
-    tabPanel(
-      "Importance",
-      htmlOutput("importance"),
-      sidebarLayout(
-        sidebarPanel(
-          h2("Importance"),
-          p("Sleep is essential for human survival, success, and maintaining
+importance_page <- tabPanel(
+  "Importance",
+  htmlOutput("importance"),
+  sidebarLayout(
+    sidebarPanel(
+      h2("Importance"),
+      p("Sleep is essential for human survival, success, and maintaining
             the balance for overall health yet so many still dont view
             sleep as a basic human right. As a result, this study will look
             at the relationship between sleep, overall success and health.
@@ -83,7 +73,7 @@ ui <- fluidPage(
             this value. This factor then raises questions on what we value
             and deem as important.
 "),
-          p("Sleep is essential to human life. Therefore, it should be
+      p("Sleep is essential to human life. Therefore, it should be
               prioritized to people so they can enjoy their lives at full
               potential. According to NHS, without the right amount of sleep
               people experience short term effects such as short tempers,
@@ -93,52 +83,50 @@ ui <- fluidPage(
               suffer these consequences, it affects their daily life in
               many places such as relationships, work ethic, performance,
               and even overall self love and confidence.")
-        ),
-        mainPanel(
-          strong("Questions to consider"),
-
-          p("1. How does the amount of sleep one gets correlate to their
+    ),
+    mainPanel(
+      strong("Questions to consider"),
+      
+      p("1. How does the amount of sleep one gets correlate to their
               work performance and lifestyle? "),
-          p("2. How does the amount of sleep one gets correlate to their
+      p("2. How does the amount of sleep one gets correlate to their
               overall health and self-love, and happiness?")
-        )
-      ),
-    ),
+    )
+  )
+)
 
-    tabPanel(
-      "Sleep and Workplace",
-      htmlOutput("sleep_workplace"),
-      sidebarLayout(
-        sidebarPanel(
-          h2("Sleep and the Workplace"),
-          br(),
-        ),
-        mainPanel(
-          plotOutput(outputId = "income_graph"),
-          p("This graphic shows a stacked bar chart of people's typical
-            hours of sleep correlated to their household income.  As shown,
-            there is a steady increase in income per extra hour of sleep a
-            person gets. It can be concluded that at 4 hours of sleep a night,
-            50% of people make over $50,000 a year, but at 9 hours of sleep,
-            about 85% of people make over $50,000 a year. Therefore, with an
-            extra 5 hrs of sleep a night, you have a 35% higher chance of
-            making more than $50,000 a year.
-"),
-        )
+sleep_and_workplace_page <-  tabPanel(
+  "Sleep and Work",
+  htmlOutput("sleep_workplace"),
+  sidebarLayout(
+    sidebarPanel(
+      h2("Sleep and the Workplace"),
+      selectInput(
+        inputId = "workplace",
+        label = "Typical Hours of Sleep vs...",
+        selected = "Income",
+        choices = list("Income" = "Income", "Caffine" = "Caffine")
       ),
+      br(),
     ),
+    mainPanel(
+      plotOutput(outputId = "workplace_graph"),
+      textOutput(outputId = "workplace_text"),
+    )
+  ),
+)
 
-    tabPanel(
-      "Sleep and Health",
-      htmlOutput("sleep_health"),
-      sidebarLayout(
-        sidebarPanel(
-          h2("Sleep and Health"),
-          br(),
-        ),
-        mainPanel(
-          plotOutput(outputId = "stress_graph"),
-          p("This graphic shows a stacked bar chart of people's typical
+sleep_and_health_page <-  tabPanel(
+  "Sleep and Health",
+  htmlOutput("sleep_health"),
+  sidebarLayout(
+    sidebarPanel(
+      h2("Sleep and Health"),
+      br(),
+    ),
+    mainPanel(
+      plotOutput(outputId = "stress_graph"),
+      p("This graphic displays a stacked bar chart of people's typical
             hours of sleep correlated to their stress levels.  As shown in
             the chart, there is a trend of getting nearly 7 hours of sleep
             a night corresponding to much lower severe stress symptoms. As
@@ -149,33 +137,53 @@ ui <- fluidPage(
             symptoms. Therefore, adding 4/5 hours of sleep decreases chances
             of severe stress by 15%.
 ")
-        )
-      ),
-    ),
+    )
+  ),
+)
 
-    tabPanel(
-      "About Us",
-      htmlOutput("about_us"),
-      sidebarLayout(
-        sidebarPanel(
-          h2("About Us"),
-          br(),
-          p("View our technical report", a("here", href = "https://github.com/emmad47-1764199/Info-201-Group-Project/wiki/Technical-Report")),
-          br(),
-          p("Info-201: Technical Foundations of Informatics"),
-          p("The Information School"),
-          p("University of Washington"),
-          p("Autumn 2019")
-        ),
-        mainPanel(
-          h4(strong("Team")),
-          p("Emma Dickenson"),
-          p("Balqisa Omar Hassan"),
-          p("Jocelyn Borovich"),
-          p("Rae Ouyang")
-        )
-      ),
+about_us_page <- tabPanel(
+  "About Us",
+  htmlOutput("about_us"),
+  sidebarLayout(
+    sidebarPanel(
+      h2("About Us"),
+      br(),
+      p("View our technical report", a("here", href = "https://github.com/emmad47-1764199/Info-201-Group-Project/wiki/Technical-Report")),
+      br(),
+      p("Info-201: Technical Foundations of Informatics"),
+      p("The Information School"),
+      p("University of Washington"),
+      p("Autumn 2019")
     ),
+    mainPanel(
+      h4(strong("Team")),
+      p("Emma Dickenson"),
+      p("Balqisa Omar Hassan"),
+      p("Jocelyn Borovich"),
+      p("Rae Ouyang")
+    )
+  ),
+)
+
+ui <- fluidPage(
+
+  # Application title
+  titlePanel("The Importance of Sleep"),
+
+  # tabs at the top
+  tabsetPanel(
+    type = "tabs", id = "nav_bar",
+
+    # individual page
+    intro_page,
+
+    importance_page,
+
+    sleep_and_workplace_page,
+
+    sleep_and_health_page,
+
+    about_us_page,
 
     mainPanel()
   )
@@ -183,11 +191,15 @@ ui <- fluidPage(
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
-  output$income_graph <- renderPlot({
-    return(income_vs_sleep_bar)
+  output$workplace_graph <- renderPlot({
+    return(get_graph(input$workplace))
+  })
+  
+  output$workplace_text <- renderText({
+    return(get_text(input$workplace))
   })
   output$stress_graph <- renderPlot({
-    return(stress_vs_sleep_bar)
+    return(get_graph("Stress"))
   })
   output$sleep_pie <- renderPlot({
     return(sleep_freq_pie)
@@ -196,6 +208,7 @@ server <- function(input, output) {
 
   })
 }
+
 
 # Run the application
 shinyApp(ui = ui, server = server)
