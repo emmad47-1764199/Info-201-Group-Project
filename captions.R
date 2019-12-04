@@ -69,7 +69,7 @@ get_text <- function(input) {
     eighth grade than those with more or less hours of sleep.",
     
     "This graphic displays a stacked bar chart of people's typical
-    hours of sleep in relation to their stress levels.  As shown in
+    hours of sleep in relation to their stress levels. As shown in
     the chart, there is a trend of getting nearly 7 hours of sleep
     a night corresponding to much lower severe stress symptoms. As
     sleep time decreases and increases below 5 and above 10, severe
@@ -79,10 +79,44 @@ get_text <- function(input) {
     symptoms. Therefore, adding 4/5 hours of sleep decreases chances
     of severe stress by 15%.",
     
-    "motivation caption",
-    "physical caption",
-    "mental caption",
-    "sex caption"
+    "This graphic displays a stacked bar chart of people's typical
+    hours of sleep in relation to their motivation of getting sleep. 
+    The graphic shows an apparent trend that the more sleeping hours 
+    people get per day, the higher motivation for sleep they possess. 
+    The groups of getting 5 and 6 typical workday hours of sleep have 
+    the highest percent (nearly 20%) of 'Not motivated at all', while 
+    for the group of getting 8 and 9 hours of sleep per workday, only 
+    about 10% of people feel 'Not motivated at all' and more than 50% 
+    of the people in these groups get high motivation for sleep 
+    ('Extremly motivated' and 'Very motivated').",
+    
+    "This graphic displays a stacked bar chart of the relationship 
+    between the typical hours of sleep people get and their physical 
+    health situation. There is a pretty clear trend that the more hours 
+    of sleep people get, the better physical health they can possess, as 
+    there is about 10% of people reported 'Poor' physical health in 5 
+    typical workday hours of sleep group, but there is 0% of people 
+    reported 'Poor' physical health in the group of getting 9 hours of 
+    sleep per workday. What's more, the high percent of people reporting 
+    'Excellent' physical health concentrates on 7 to 9 hours sleeping 
+    hours group.",
+    
+    "This graphic displays a stacked bar chart of people's typical hours
+    of sleep in relation to their mental health situation. As shown in 
+    the graphic, the better mental health situation has a direct 
+    relationship with getting enough hours of sleep per night (>= 7 hours). 
+    However, the relationship is not as simple as the more sleep you get,
+    the better mental health you possess. As the group of 7 hours of sleep
+    has the highest percent of people reported 'Excellent' and 'Very Good'
+    mental health sitaution, it can be concluded that the core of having
+    good mental health is getting appropriate and just enough hours of 
+    sleep--not too less and neither too much.",
+    
+    "This graphic displays a stacked bar chart of whether the lacking of
+    sleep affects people's sexual relationship or not. The result turns out
+    that there is not big relationship between the hours of sleep people 
+    get and their sexual relationship, as 77.9% of people reported 'No' to
+    the problem and only 22.1% of people reported 'Yes'."
   )
   paste0(texts[[index]])
 }
