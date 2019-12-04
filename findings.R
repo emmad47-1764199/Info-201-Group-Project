@@ -24,6 +24,8 @@ findings_page <- tabPanel(
          work performance and lifestyle? "),
       h6("2. How does the amount of sleep one gets relate to their
          overall health and self-love, and happiness?"),
+      br(),
+      h5(strong("Quick Analysis:")),
       p("Sleep is essential for human survival, success, and
         maintaining the balance for overall health yet so many 
         still don't view sleep as a basic human right. Due to 
