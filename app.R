@@ -12,7 +12,7 @@ source("about_us.R")
 ui <- fluidPage(
   
   # Theme
-  theme = shinytheme("cyborg"),
+  theme = shinytheme("superhero"),
   
   # Application title
   titlePanel("The Importance of Sleep"),
