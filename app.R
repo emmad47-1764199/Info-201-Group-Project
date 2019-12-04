@@ -63,6 +63,42 @@ server <- function(input, output) {
   output$sleep_pie <- renderPlot({
     return(sleep_freq_pie)
   })
+  
+  output$Emma_photo <- renderImage({
+    list(src = "photos_of_us/Emma.jpg",
+         contentType = "image/jpg",
+         width = 400,
+         height = 400,
+         alt = "This is Emma's photo")
+  },
+  deleteFile = FALSE)
+  
+  output$Balqisa_photo <- renderImage({
+    list(src = "photos_of_us/Balqisa.JPG",
+         contentType = "image/jpg",
+         width = 300,
+         height = 400,
+         alt = "This is Balqisa's photo")
+  },
+  deleteFile = FALSE)
+  
+  output$Jocelyn_photo <- renderImage({
+    list(src = "photos_of_us/Jocelyn.jpg",
+         contentType = "image/jpg",
+         width = 800,
+         height = 400,
+         alt = "This is Jocelyn's photo")
+  },
+  deleteFile = FALSE)
+  
+  output$Rae_photo <- renderImage({
+    list(src = "photos_of_us/Rae.JPG",
+         contentType = "image/jpg",
+         width = 550,
+         height = 400,
+         alt = "This is Rae's photo")
+  },
+  deleteFile = FALSE)
 }
 
 
