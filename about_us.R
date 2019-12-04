@@ -43,6 +43,7 @@ about_us_page <- tabPanel(
       imageOutput("Balqisa_photo"),
       p(h5("Balqisa Omar Hassan")),
       p(strong("Hours of Sleep: "), "8"),
+      p(strong("Major: "), "Medical Anthropology and Global Health"),
       p(h6("Bio: "), 
       "As a self diagnosed insomniac, nothing makes me happier than having 
       8 hours of sleep. I found that the more sleep I get, the happier and less 
