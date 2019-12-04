@@ -14,7 +14,7 @@ about_us_page <- tabPanel(
     ),
     mainPanel(
       h4(strong("Team")),
-      img(src = "photos_of_us/Emma.JPG", alt = "Emma's Photo", height = 100, width = 100),
+      imageOutput("Emma_photo"),
       p(h5(("Emma Dickenson")),
       p(strong("Hours of Sleep: "), "7"),
       p(strong("Major: "), "Pre-Informatics"),
@@ -33,7 +33,7 @@ about_us_page <- tabPanel(
         of experience with Shiny. This required using a lot of outside sources to
         find the proper functions to use.  "),
       br(),
-      img(src = "photos_of_us/Balqisa.JPG", alt = "Balqisa's Photo", height = 100, width = 100),
+      imageOutput("Balqisa_photo"),
       p(h5("Balqisa Omar Hassan")),
       p(strong("Hours of Sleep: "), "8"),
       p(h6("Bio: "), "As a self diagnosed insomniac, nothing makes me happier than having 
@@ -48,7 +48,7 @@ about_us_page <- tabPanel(
       what career path I wanted to follow after college but this project inspired me 
       to look into potential career fields within user experience research."),
       br(),
-      img(src = "photos_of_us/Jocelyn.JPG", alt = "Jocelyn's Photo", height = 100, width = 100),
+      imageOutput("Jocelyn_photo"),
       p(h5("Jocelyn Borovich")),
       p(strong("Hours of Sleep: "), "7"),
       p(strong("Major: "), "Informatics Hopeful"),
@@ -69,7 +69,7 @@ about_us_page <- tabPanel(
         fascinates me with its capabilities and power and I would love to explore the
         field much more!" ),
       br(),
-      img(src = "photos_of_us/Rae.JPG", alt = "Rae's Photo", height = 100, width = 100),
+      imageOutput("Rae_photo"),
       p(h5("Rae Ouyang")),
       p(strong("Hours of Sleep: "), "6"),
       p(strong("Major:"), "Pre-Sciences"),
