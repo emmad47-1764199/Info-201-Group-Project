@@ -10,14 +10,16 @@ sleep_and_workplace_page <-  tabPanel(
         selected = "Highest Education",
         choices = list("Highest Education" = "education",
                        "Income" = "income",
+                       "Sleeping and Driving" = "driving",
                        "Caffine" = "caffine",
-                       "Employment" = "employment",
-                       "Sleeping and Driving" = "driving")##########
+                       "Quality of Life" = "quality"
+                       )
       ),
       br(),
     ),
     mainPanel(
       plotOutput(outputId = "workplace_graph"),
+      h3(),
       textOutput(outputId = "workplace_text"),
     )
   ),

@@ -13,14 +13,20 @@ library(ggrepel)
 
 get_graph <- function(input) {
   
-  options <- c("income", "caffine", "employment",
-               "driving",
-               "education", "stress")#########
+  options <- c("income", "caffine",
+               "quality", "driving",
+               "education", "stress",
+               "motivation",
+               "physical",
+               "mental",
+               "sex")
   
   index <- match(input, options)
-  graphs <- c(graph_income, graph_caffine, graph_employment,
+  graphs <- c(graph_income, graph_caffine, graph_quality,
               graph_driving, graph_education,
-              graph_stress)#########
+              graph_stress, graph_motivation,
+              graph_physical, graph_mental,
+              graph_sex)
 
   graphs[[index]]()
 }
@@ -37,10 +43,22 @@ translate <- function(col, level_col) {
 #function that filters the data for performance graphs
 filter_data1 <- function(col, value) {
   df <- performance %>% 
-    filter(q7h <= 9, q7h >= 4, performance[,col] <= value) %>%
+    filter(q7h <= 9, q7h >= 5, performance[,col] <= value) %>%
     select(q7h, col)
   
   df$hrs <- sapply(df$q7h, toString)
+  df$fill <- sapply(df[,col], toString)
+  
+  return(df)
+}
+
+filter_data2 <- function(col, value) {
+  df <- pain %>% 
+    filter(Q6_HoursB <= 9, Q6_HoursB >= 5, pain[,col] <= value,
+           pain[,col] >= 1) %>%
+    select(Q6_HoursB, col)
+  
+  df$hrs <- sapply(df$Q6_HoursB, toString)
   df$fill <- sapply(df[,col], toString)
   
   return(df)
@@ -76,60 +94,35 @@ graph_two_categoricals <- function(x, fill, fill_level,
     scale_fill_brewer(palette = color, direction = -1)
 }
 
-# graph_marital <- function() {
-#   marital <- filter_data1("d5", 5)
-# 
-#   marital <- marital %>%
-#     group_by(d5) %>%
-#     summarize(
-#       average = sum(q7h) / length(q7h)
-#     )
-#   
-#   level <- c("Poor", "Fair",
-#              "Good", "Very good",
-#              "Excellent")
-#   
-#   marital$d5 <- translate(marital$d5, level)
-#   
-# ggplot(marital) + geom_col(aes(x = d5, y = average, fill = d5)) +
-#   labs(title = "Typical Sleep on Workdays vs Marital Status",
-#        x = "Marital Status", y = "Average Hours of Sleep") +
-#   scale_fill_brewer(palette = "BrBG") +
-#   guides(fill = guide_legend(title = "Marital Status" ))
-# }
-
 #graph of education levels vs hours of sleep 
 graph_education <- function() {
   education <- filter_data1("d6", 7)
-  
+
   level <- c(
     "8th grade or less", "Some high school",
     "Graduated high school", "Vocational/Tech school",
     "Some college", "Graduated college", "Advanced degree"
   )
-  
+
   order <- c(
     "Advanced degree", "Graduated college",
     "Some college", "Vocational/Tech school",
     "Graduated high school", "Some high school", "8th grade or less"
   )
-  
+
   graph_two_categoricals(
     education$hrs,
     education$fill,
     level,
     "Typical Workday Hours of Sleep
-vs Caffinated Beverages",
-    "Typical Caffinated Beverages
-Consumed Daily",
+vs Highest Education",
+    "Highest Education",
     "GnBu",
     order
   )
-  
-  
 }
 
-# graph of caffine intake vs hours of sleep 
+# # graph of caffine intake vs hours of sleep 
 graph_caffine <- function() {
   caffine <- filter_data1("q29", 5)
 
@@ -156,12 +149,11 @@ Consumed Daily",
   )
 }
 
-# Hours of sleep vs income (performance data)___________
-
+# # Hours of sleep vs income (performance data)___________
 # filter data
 graph_income <- function() {
   income <- filter_data1("d8", 7)
-  
+
   level <- c(
     "Under $15,000", "$15,000 - $25,000",
     "$25,001 - $35,000", "$35,001 - $50,000",
@@ -174,7 +166,7 @@ graph_income <- function() {
     "$25,001 - $35,000", "$15,000 - $25,000",
     "Under $15,000"
   )
-  
+
   # create a stacked bar chart
   graph_two_categoricals(
     income$hrs,
@@ -187,36 +179,33 @@ graph_income <- function() {
     order
   )
 }
-
-# graph of employment status vs average hrs of sleep 
-graph_employment <- function() {
-  employment <- filter_data1("qs2", 3)
-
-  employment <- employment %>%
-      group_by(qs2) %>%
-      summarize(
-        average = sum(q7h) / length(q7h)
-      )
-
-  level <- c("Working more than one job", "Working full-time", "Working part-time")
+# 
+# # graph of employment status vs average hrs of sleep 
+graph_quality <- function() {
+  quality <- filter_data2("Q1_B", 5)
   
-  employment$qs2 <- translate(employment$qs2, level)
-
-  ggplot(employment) + geom_col(aes(x = qs2, y = average, fill = qs2)) +
-      labs(title = "Average Sleep on Workdays vs Employment Status",
-           x = "Employment Status", y = "Average Hours of Sleep") +
-      guides(fill = guide_legend(title = "Employment Status" ))
+  level <- c("Excellent", "Very Good ", "Good", "Fair", "Poor")
+  
+  graph_two_categoricals(
+    quality$hrs, quality$fill,
+    level,
+    "Typical Workday Hours of Sleep
+vs Quality of Life",
+    "Quality of Life",
+    "RdPu",
+    level
+  )
 }
-
-# Graph of falling asleep while driving_________________________________
+# 
+# # Graph of falling asleep while driving_________________________________
 graph_driving <- function() {
   driving <- performance %>%
     select(q35) %>%
     filter(q35 <= 2)
-  
+
   level <- c("Yes", "No")
   driving$q35 <- translate(driving$q35, level)
-  
+
   driving <- driving %>%
     group_by(q35) %>%
     count() %>%
@@ -247,7 +236,7 @@ take_sum <- function(col) {
   sum(hours_of_sleep_freq[col, "freq"])
 }
 
-# # filter the data
+#filter the data
 hours_of_sleep_freq <- performance %>%
   select(q7h) %>%
   filter(q7h <= 11) %>%
@@ -262,7 +251,7 @@ intervaled_freq <- c(
   take_sum(7), take_sum(6), take_sum(5), take_sum(4)
 )
 
-# levels (text answers)
+# levels (survey answers)
 ranges <- c(
   "more than 9", "less than 4", "8-9", "7-8", "6-7",
   "5-6", "4-5"
@@ -327,21 +316,15 @@ sleep_freq_pie <- ggplot(data = sleep_ranges) +
 
 # filter data
 graph_stress <- function() {
-  hrs_stress <- pain %>%
-    filter(Q6_HoursB <= 11, Q6_HoursB >= 3, Q13_b <= 5, Q13_b >= 1)
-
-  hrs <- sapply(hrs_stress$Q6_HoursB, toString)
-
-  stress <- sapply(hrs_stress$Q13_b, toString)
+  stress <- filter_data2("Q13_b", 5)
 
   level <- c("None", "Mild", "Moderate", "Severe", "Very Severe")
   order <- c("Very Severe", "Severe", "Moderate", "Mild", "None")
-
-  df <- data.frame(hrs, stress)
-
+  
   # create a stacked bar chart
   graph_two_categoricals(
-    hrs, stress, level,
+    stress$hrs, stress$fill,
+    level,
     "Typical Workday Hours of Sleep
                       vs Stress",
     "Typical Stress Level",
@@ -349,36 +332,144 @@ graph_stress <- function() {
     order
   )
 }
+
+graph_motivation <- function() {
+  motivation <- filter_data2("Q16", 5)
+  
+  level <- c("Extremely motivated", "Very motivated",
+             "Somewhat motivated", "Not that motivated",
+             "Not motivated at all")
+  
+  graph_two_categoricals(
+    motivation$hrs, motivation$fill,
+    level,
+    "Typical Workday Hours of Sleep
+vs Motivation for Sleep",
+    "Typical Motivation to get Sleep",
+    "BuPu",
+    level
+  )
+}
+
+graph_physical <- function() {
+  physical <- filter_data2("Q1_C", 5)
+  
+  level <- c("Excellent", "Very Good ", "Good", "Fair", "Poor")
+  
+  graph_two_categoricals(
+    physical$hrs, physical$fill,
+    level,
+    "Typical Workday Hours of Sleep
+vs Physical Health",
+    "Physical Health",
+    "RdPu",
+    level
+  )
+}
+
+graph_mental <- function() {
+  mental <- filter_data2("Q1_D", 5)
+  
+  level <- c("Excellent", "Very Good ", "Good", "Fair", "Poor")
+  
+  graph_two_categoricals(
+    mental$hrs, mental$fill,
+    level,
+    "Typical Workday Hours of Sleep
+vs Mental Health",
+    "Mental Health",
+    "Greens",
+    level
+  )
+}
+
+graph_sex <- function() {
+  sex <- filter_data1("q47", 2) %>%
+    select(fill)
+  
+  level <- c("Yes", "No")
+  sex$fill <- translate(sex$fill, level)
+  
+  sex <- sex %>%
+    group_by(fill) %>%
+    count() %>%
+    ungroup() %>%
+    mutate(per = `n` / sum(`n`)) %>%
+    mutate(
+      label = paste0(
+        fill, " (",
+        scales::percent(per), ")"
+      )
+    )
+  
+  ggplot(sex, aes(x = "", y = per , fill = fill), position = "fill") +
+    geom_col() +
+    labs(title = "Proportion of People in Which Lack of Sleep
+         Effects their Sexual Relationship",
+         x =  "", y = "Percent of People") +
+    guides(fill = guide_legend(title = "Has your sexual
+relationship been affected
+by lack of sleep?")) +
+    geom_text(aes(label = label), vjust = 4)
+}
+
+
 #
-# # Interesting stats_______________________________________________________
-#
-# # chance of making more than 75,000 on 5 and 8
-# # hours of sleep on workdays
-#
+# Interesting stats_______________________________________________________
+
+# chance of making more than 75,000 on 5 and 7
+# hours of sleep on workdays
+
+# hrs_income <- performance %>%
+#   select(d8, q7h)
+# 
 # high_money_count <- hrs_income %>%
 #   filter(d8 >= 6) %>%
 #   summarize(
 #     total = length(d8)
 #   ) %>%
 #   pull(total)
-#
-# chance_7 <- hrs_income %>%
+# 
+#  chance_7 <- hrs_income %>%      #35% chance
 #   filter(d8 >= 6, q7h == 7) %>%
 #   summarize(
 #     chance = length(d8) / high_money_count
 #   )
-#
-# chance_5 <- hrs_income %>%
+# 
+# chance_5 <- hrs_income %>%       #11% chance
 #   filter(d8 >= 6, q7h == 5) %>%
 #   summarize(
 #     chance = length(d8) / high_money_count
 #   )
-#
-# diff_5_to_7 <- chance_7 - chance_5
-#
+# 
+# diff_5_to_7 <- chance_7 - chance_5    #24% difference with 2 more hrs of sleep
+# 
 # # Percent of people that get less than 8 hrs of sleep (79%)
-#
+# 
 # percent_less_than_8 <- sum(
 #   intervaled_freq[4:7],
 #   intervaled_freq[2]
 # ) / sum(intervaled_freq)
+
+#of people with sat least some college, most get 7hrs of sleep 
+df <- filter_data1("d6", 7) %>%
+  select(d6, q7h) %>%
+  filter(d6 > 4) %>%
+  group_by(q7h) %>%
+  summarize(
+    freq = length(q7h)
+  ) %>%
+filter(freq == max(freq)) %>%
+  pull(q7h)
+
+#Of the non college educated people, most get 6hrs of sleep
+df <- filter_data1("d6", 7) %>%
+  select(d6, q7h) %>%
+  filter(d6 < 4) %>%
+  group_by(q7h) %>%
+  summarize(
+    freq = length(q7h)
+  ) %>%
+  filter(freq == max(freq)) %>%
+  pull(q7h)
+

@@ -4,9 +4,9 @@ intro_page <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       h2("Overview"),
-      p("Approximately one-third of the American population does not
-            get enough sleep, yet a lack of sleep can have serious effects
-            such as poor physical and mental health (Marcin 2017).
+      p("Over three-fourths of the American population gets less than
+            8 hours of sleep on workdays, yet a lack of sleep can have 
+            serious effects such as poor health and a tougher lifestyle.
             Oftentimes, people prioritize other responsibilities, such as
             work, school, exercise and socialization over sleep, but at a
             certain level of lack of sleep, performance in these tasks are
@@ -32,6 +32,7 @@ intro_page <- tabPanel(
     ),
     mainPanel(
       plotOutput(outputId = "sleep_pie"),
+      h3(),
       p("This graphic displays a pie chart of the proportion of people
             that get various hours of sleep on workdays. From the chart it
             can be concluded that over 75% of people average less than 8

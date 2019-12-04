@@ -14,7 +14,7 @@ about_us_page <- tabPanel(
     ),
     mainPanel(
       h4(strong("Team")),
-      !(img)[](photos_of_us/Emma.jpg),
+      #!(img)[](photos_of_us/Emma.jpg),
       p(strong(("Emma Dickenson")),
       p("Hours of Sleep: 7"),
       p("Major: Pre-Informatics"),

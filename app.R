@@ -57,6 +57,9 @@ server <- function(input, output) {
   output$health_graph <- renderPlot({
     return(get_graph(input$health))
   })
+  output$health_text <- renderText({
+    return(get_text(input$health))
+  })
   output$sleep_pie <- renderPlot({
     return(sleep_freq_pie)
   })
