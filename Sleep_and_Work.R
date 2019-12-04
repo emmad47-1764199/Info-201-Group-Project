@@ -1,4 +1,3 @@
-
 sleep_and_workplace_page <-  tabPanel(
   "Sleep and Work",
   htmlOutput("sleep_workplace"),
@@ -8,8 +7,12 @@ sleep_and_workplace_page <-  tabPanel(
       selectInput(
         inputId = "workplace",
         label = "Typical Hours of Sleep vs...",
-        selected = "Income",
-        choices = list("Income" = "Income", "Caffine" = "Caffine")
+        selected = "Highest Education",
+        choices = list("Highest Education" = "education",
+                       "Income" = "income",
+                       "Caffine" = "caffine",
+                       "Employment" = "employment",
+                       "Sleeping and Driving" = "driving")##########
       ),
       br(),
     ),

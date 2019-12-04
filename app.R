@@ -54,8 +54,8 @@ server <- function(input, output) {
   output$workplace_text <- renderText({
     return(get_text(input$workplace))
   })
-  output$stress_graph <- renderPlot({
-    return(get_graph("Stress"))
+  output$health_graph <- renderPlot({
+    return(get_graph(input$health))
   })
   output$sleep_pie <- renderPlot({
     return(sleep_freq_pie)

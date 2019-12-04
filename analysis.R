@@ -11,11 +11,16 @@ library("ggplot2")
 library(scales)
 library(ggrepel)
 
-options <- c("Income", "Caffine", "Stress")
-
 get_graph <- function(input) {
+  
+  options <- c("income", "caffine", "employment",
+               "driving",
+               "education", "stress")#########
+  
   index <- match(input, options)
-  graphs <- c(graph_income, graph_caffine, graph_stress)
+  graphs <- c(graph_income, graph_caffine, graph_employment,
+              graph_driving, graph_education,
+              graph_stress)#########
 
   graphs[[index]]()
 }
@@ -27,6 +32,18 @@ translate <- function(col, level_col) {
     col[i] <- level_col[as.numeric(col[i])]
   }
   return(col)
+}
+
+#function that filters the data for performance graphs
+filter_data1 <- function(col, value) {
+  df <- performance %>% 
+    filter(q7h <= 9, q7h >= 4, performance[,col] <= value) %>%
+    select(q7h, col)
+  
+  df$hrs <- sapply(df$q7h, toString)
+  df$fill <- sapply(df[,col], toString)
+  
+  return(df)
 }
 
 # Function that graphs two categorical variables based on given
@@ -59,7 +76,168 @@ graph_two_categoricals <- function(x, fill, fill_level,
     scale_fill_brewer(palette = color, direction = -1)
 }
 
+# graph_marital <- function() {
+#   marital <- filter_data1("d5", 5)
+# 
+#   marital <- marital %>%
+#     group_by(d5) %>%
+#     summarize(
+#       average = sum(q7h) / length(q7h)
+#     )
+#   
+#   level <- c("Poor", "Fair",
+#              "Good", "Very good",
+#              "Excellent")
+#   
+#   marital$d5 <- translate(marital$d5, level)
+#   
+# ggplot(marital) + geom_col(aes(x = d5, y = average, fill = d5)) +
+#   labs(title = "Typical Sleep on Workdays vs Marital Status",
+#        x = "Marital Status", y = "Average Hours of Sleep") +
+#   scale_fill_brewer(palette = "BrBG") +
+#   guides(fill = guide_legend(title = "Marital Status" ))
+# }
 
+#graph of education levels vs hours of sleep 
+graph_education <- function() {
+  education <- filter_data1("d6", 7)
+  
+  level <- c(
+    "8th grade or less", "Some high school",
+    "Graduated high school", "Vocational/Tech school",
+    "Some college", "Graduated college", "Advanced degree"
+  )
+  
+  order <- c(
+    "Advanced degree", "Graduated college",
+    "Some college", "Vocational/Tech school",
+    "Graduated high school", "Some high school", "8th grade or less"
+  )
+  
+  graph_two_categoricals(
+    education$hrs,
+    education$fill,
+    level,
+    "Typical Workday Hours of Sleep
+vs Caffinated Beverages",
+    "Typical Caffinated Beverages
+Consumed Daily",
+    "GnBu",
+    order
+  )
+  
+  
+}
+
+# graph of caffine intake vs hours of sleep 
+graph_caffine <- function() {
+  caffine <- filter_data1("q29", 5)
+
+  caffine$fill <- sapply(as.numeric(caffine$q29) + 1, toString)
+
+  level <- c(
+    "0", "1", "2", "3", "4", "5"
+  )
+
+  translate(caffine$fill, level)
+
+  order <- c("5", "4", "3", "2", "1", "0")
+
+  graph_two_categoricals(
+    caffine$hrs,
+    caffine$fill,
+    level,
+    "Typical Workday Hours of Sleep
+vs Caffinated Beverages",
+    "Typical Caffinated Beverages
+Consumed Daily",
+    "YlOrBr",
+    order
+  )
+}
+
+# Hours of sleep vs income (performance data)___________
+
+# filter data
+graph_income <- function() {
+  income <- filter_data1("d8", 7)
+  
+  level <- c(
+    "Under $15,000", "$15,000 - $25,000",
+    "$25,001 - $35,000", "$35,001 - $50,000",
+    "$50,001 - $75,000", "$75,001 - $100,000",
+    "More than $100,000"
+  )
+  order <- c(
+    "More than $100,000", "$75,001 - $100,000",
+    "$50,001 - $75,000", "$35,001 - $50,000",
+    "$25,001 - $35,000", "$15,000 - $25,000",
+    "Under $15,000"
+  )
+  
+  # create a stacked bar chart
+  graph_two_categoricals(
+    income$hrs,
+    income$fill,
+    level,
+    "Typical Workday Hours of Sleep
+                       vs Income",
+    "Income Range",
+    "YlGn",
+    order
+  )
+}
+
+# graph of employment status vs average hrs of sleep 
+graph_employment <- function() {
+  employment <- filter_data1("qs2", 3)
+
+  employment <- employment %>%
+      group_by(qs2) %>%
+      summarize(
+        average = sum(q7h) / length(q7h)
+      )
+
+  level <- c("Working more than one job", "Working full-time", "Working part-time")
+  
+  employment$qs2 <- translate(employment$qs2, level)
+
+  ggplot(employment) + geom_col(aes(x = qs2, y = average, fill = qs2)) +
+      labs(title = "Average Sleep on Workdays vs Employment Status",
+           x = "Employment Status", y = "Average Hours of Sleep") +
+      guides(fill = guide_legend(title = "Employment Status" ))
+}
+
+# Graph of falling asleep while driving_________________________________
+graph_driving <- function() {
+  driving <- performance %>%
+    select(q35) %>%
+    filter(q35 <= 2)
+  
+  level <- c("Yes", "No")
+  driving$q35 <- translate(driving$q35, level)
+  
+  driving <- driving %>%
+    group_by(q35) %>%
+    count() %>%
+    ungroup() %>%
+    mutate(per = `n` / sum(`n`)) %>%
+    mutate(
+      label = paste0(
+        q35, " (",
+        scales::percent(per), ")"
+      )
+    )
+
+  ggplot(driving, aes(x = "", y = per , fill = q35), position = "fill") +
+    geom_col() +
+    labs(title = "Proportion of People Dozing off while driving
+even for a brief moment",
+    x =  "", y = "Percent of People") +
+    guides(fill = guide_legend(title = "Have You Dozed off Driving?
+Even for a Brief Moment?")) +
+    geom_text(aes(label = label), vjust = 6)
+}
 
 
 # Hours of sleep frequency Pie chart (performance)____________________
@@ -69,7 +247,7 @@ take_sum <- function(col) {
   sum(hours_of_sleep_freq[col, "freq"])
 }
 
-# filter the data
+# # filter the data
 hours_of_sleep_freq <- performance %>%
   select(q7h) %>%
   filter(q7h <= 11) %>%
@@ -137,81 +315,13 @@ sleep_freq_pie <- ggplot(data = sleep_ranges) +
     y = cumsum(per) - per / 2,
     label = label
   ),
-  size = 4,
+  size = 3.5,
   show.legend = F,
   nudge_x = 1
   ) +
   guides(fill = guide_legend(title = "Hrs of Sleep")) +
   labs(title = "Typical Hours of Sleep on a Workday") +
   scale_fill_brewer(palette = "BuPu")
-
-# Hours of sleep vs stress graph (performance data)_______________________
-
-graph_caffine <- function() {
-  hrs_caffine <- performance %>%
-    select(q29, q7h) %>%
-    filter(q7h <= 9, q7h >= 4, q29 <= 5)
-
-  hrs3 <- sapply(hrs_caffine$q7h, toString)
-
-  caffine <- sapply(hrs_caffine$q29 + 1, toString)
-
-  caffine_level <- c(
-    "0", "1", "2", "3", "4", "5"
-  )
-
-  translate(caffine, caffine_level)
-
-  order_caffine <- c("5", "4", "3", "2", "1", "0")
-
-  graph_two_categoricals(
-    hrs3, caffine,
-    caffine_level,
-    "Typical Workday Hours of Sleep
-vs Caffinated Beverages",
-    "Typical Caffinated Beverages
-Consumed Daily",
-    "YlGn",
-    order_caffine
-  )
-}
-
-# Hours of sleep vs income (performance data)___________
-
-# filter data
-graph_income <- function() {
-  hrs_income <- performance %>%
-    filter(q7h <= 9, q7h >= 4, d8 <= 7) %>%
-    select(q7h, d8)
-
-  hrs <- sapply(hrs_income$q7h, toString)
-
-  income_range <- sapply(hrs_income$d8, toString)
-
-  income_level <- c(
-    "Under $15,000", "$15,000 - $25,000",
-    "$25,001 - $35,000", "$35,001 - $50,000",
-    "$50,001 - $75,000", "$75,001 - $100,000",
-    "More than $100,000"
-  )
-  order_income <- c(
-    "More than $100,000", "$75,001 - $100,000",
-    "$50,001 - $75,000", "$35,001 - $50,000",
-    "$25,001 - $35,000", "$15,000 - $25,000",
-    "Under $15,000"
-  )
-
-  # create a stacked bar chart
-  graph_two_categoricals(
-    hrs, income_range,
-    income_level,
-    "Typical Workday Hours of Sleep
-                       vs Income",
-    "Income Range",
-    "YlGn",
-    order_income
-  )
-}
 
 # hours of sleep vs stress levels (pain data) ________________
 
@@ -220,23 +330,23 @@ graph_stress <- function() {
   hrs_stress <- pain %>%
     filter(Q6_HoursB <= 11, Q6_HoursB >= 3, Q13_b <= 5, Q13_b >= 1)
 
-  hrs2 <- sapply(hrs_stress$Q6_HoursB, toString)
+  hrs <- sapply(hrs_stress$Q6_HoursB, toString)
 
   stress <- sapply(hrs_stress$Q13_b, toString)
 
-  stress_level <- c("None", "Mild", "Moderate", "Severe", "Very Severe")
-  order_stress <- c("Very Severe", "Severe", "Moderate", "Mild", "None")
+  level <- c("None", "Mild", "Moderate", "Severe", "Very Severe")
+  order <- c("Very Severe", "Severe", "Moderate", "Mild", "None")
 
-  df <- data.frame(hrs2, stress)
+  df <- data.frame(hrs, stress)
 
   # create a stacked bar chart
   graph_two_categoricals(
-    hrs2, stress, stress_level,
+    hrs, stress, level,
     "Typical Workday Hours of Sleep
                       vs Stress",
     "Typical Stress Level",
     "OrRd",
-    order_stress
+    order
   )
 }
 #
