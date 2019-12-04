@@ -1,20 +1,17 @@
 findings_page <- tabPanel(
   "Findings",
   htmlOutput("importance"),
-  sidebarLayout(
-    sidebarPanel(
-      strong("Questions to consider"),
-      
-      p("1. How does the amount of sleep one gets relate to their
-              work performance and lifestyle? "),
-      p("2. How does the amount of sleep one gets relate to their
-              overall health and self-love, and happiness?")
-    ),
     mainPanel(
       h2("Findings"),
+      h5(strong("Questions to consider")),
+      
+      h6("1. How does the amount of sleep one gets relate to their
+              work performance and lifestyle? "),
+      h6("2. How does the amount of sleep one gets relate to their
+              overall health and self-love, and happiness?"),
       p("Sleep is essential for human survival, success, and
         maintaining the balance for overall health yet so many 
-        still don’t view sleep as a basic human right. Due to 
+        still don't view sleep as a basic human right. Due to 
         this fact, this study explores the relationship between sleep, 
         overall success, and health. Sleep is a major part of health and
         wellbeing yet many policies surrounding poverty and workers' rights 
@@ -48,8 +45,5 @@ findings_page <- tabPanel(
         As sleep levels decrease we see an increased amount of severe and
         very severe stress levels. 
         ")
-    
-      
-    )
   )
 )

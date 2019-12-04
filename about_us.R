@@ -14,6 +14,7 @@ about_us_page <- tabPanel(
     ),
     mainPanel(
       h4(strong("Team")),
+      !(img)[](photos_of_us/Emma.jpg),
       p(strong(("Emma Dickenson")),
       p("Hours of Sleep: 7"),
       p("Major: Pre-Informatics"),
@@ -34,6 +35,17 @@ about_us_page <- tabPanel(
       br(),
       p(strong("Balqisa Omar Hassan")),
       p("Hours of Sleep: 8"),
+      p("Bio: As a self diagnosed insomniac, nothing makes me happier than having 
+        8 hours of sleep. I found that the more sleep I get, the happier and less 
+        stressed I feel. During the day, I am a student researcher in a lab that 
+        focuses on social policy and diversity. I am also really passionate about 
+        inequality. Having the opportunity to focus our project on sleep really 
+        inspired me to look into the sleep patterns of disadvantaged communities. "),
+      p("Reflection: As a research assistant I was really excited to take this course
+      and develop data science skills. Working on this project allowed me to think 
+      outside of the box and outside of my comfort zone. Previously, I didn't know
+      what career path I wanted to follow after college but this project inspired me 
+      to look into potential career fields within user experience research."),
       br(),
       p(strong("Jocelyn Borovich")),
       p("Hours of Sleep: 7"),
@@ -42,6 +54,15 @@ about_us_page <- tabPanel(
       p(strong("Rae Ouyang")),
       p("Hours of Sleep: 6"),
       p("Major: Pre-Sciences"),
+      p("Bio: I used to consider sleeping a complete waste of time and thus am always
+        willing to sacrifice my sleeping time to do other things like schoolwork and 
+        entertainment. No matter how many times my teacher or parents warn me that the 
+        less you sleep the lower your score is, I never believe them and keep 
+        despising sleeping. However, as I grew up, I gradually realized how stupid I
+        was all the time. Lack of sleeping makes me hard to focus, so in fact, most 
+        of the time I put in studying or doing any serious things were just a 
+        waste--low efficiency, low accuracy, and incorrect cognition have always 
+        made the thing I want to achieve a mess."),
     )
   ),
 )
