@@ -3,7 +3,7 @@ sleep_and_health_page <-  tabPanel(
   htmlOutput("sleep_health"),
   sidebarLayout(
     sidebarPanel(
-      h2("Sleep and Health"),
+      h3("Sleep and Health"),
       selectInput(
         inputId = "health",
         label = "Typical Hours of Sleep vs...",

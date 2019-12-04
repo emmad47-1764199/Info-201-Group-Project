@@ -50,6 +50,7 @@ about_us_page <- tabPanel(
       p(strong("Jocelyn Borovich")),
       p("Hours of Sleep: 7"),
       p("Major: Pre-Sciences"),
+      p("Bio: "),
       br(),
       p(strong("Rae Ouyang")),
       p("Hours of Sleep: 6"),
