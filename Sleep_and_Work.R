@@ -1,9 +1,11 @@
 sleep_and_workplace_page <-  tabPanel(
   "Sleep and Work",
   htmlOutput("sleep_workplace"),
+  
   sidebarLayout(
     sidebarPanel(
-      h3("Sleep and the Workplace"),
+      h3("Sleep and Work"),
+      br(),
       selectInput(
         inputId = "workplace",
         label = "Typical Hours of Sleep vs...",
@@ -12,15 +14,14 @@ sleep_and_workplace_page <-  tabPanel(
                        "Income" = "income",
                        "Sleeping and Driving" = "driving",
                        "Caffine" = "caffine",
-                       "Quality of Life" = "quality"
-                       )
-      ),
-      br(),
+                       "Quality of Life" = "quality")
+      )
     ),
+    
     mainPanel(
       plotOutput(outputId = "workplace_graph"),
       h3(),
-      textOutput(outputId = "workplace_text"),
+      textOutput(outputId = "workplace_text")
     )
   ),
 )
