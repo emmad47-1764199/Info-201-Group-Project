@@ -1,12 +1,3 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
 library(shinythemes)
 source("analysis.R")
@@ -14,8 +5,8 @@ source("introduction.R")
 source("findings.R")
 source("Sleep_and_Work.R")
 source("Sleep_and_Health.R")
-source("about_us.R")
 source("captions.R")
+source("about_us.R")
 
 
 ui <- fluidPage(
@@ -39,18 +30,19 @@ ui <- fluidPage(
 
     sleep_and_health_page,
 
-    about_us_page,
-
-    mainPanel()
+    about_us_page
   )
 )
 
-# server
+
 server <- function(input, output) {
+  
+  output$sleep_pie <- renderPlot({
+    return(sleep_freq_pie)
+  })
   output$workplace_graph <- renderPlot({
     return(get_graph(input$workplace))
   })
-  
   output$workplace_text <- renderText({
     return(get_text(input$workplace))
   })
@@ -59,9 +51,6 @@ server <- function(input, output) {
   })
   output$health_text <- renderText({
     return(get_text(input$health))
-  })
-  output$sleep_pie <- renderPlot({
-    return(sleep_freq_pie)
   })
   
   output$Emma_photo <- renderImage({
