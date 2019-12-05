@@ -43,20 +43,30 @@ findings_page <- tabPanel(
         than 8 hours a day, averaging about 5 hours of 
         sleep a night. Those who had an annual income 
         greater than $150,000 mostly slept around 9 hours 
-        of sleep a night. 
+        of sleep a night.  
         "),
-       p("The amount of sleep one gets also influences the
-        number of caffeinated beverages consumed daily. Those 
-        who slept around 9 hours of sleep a night drank on 
-        average 2-3 beverages while those who slept 4-6 hours
-        on average drank up to 5 beverages.
+       p("The amount of sleep one gets also influences the number of caffeinated
+         beverages consumed daily, coherence and everyday function. Those who 
+         slept around 9 hours of sleep a night drank on average 2-3 beverages while 
+         those who slept 4-6 hours on average drank up to 5 beverages. It was reported
+         that 36% of people have fallen asleep at the wheel. As a result, lack of sleep can be attributed
+         to the most common causes of fatal car accidents. Furthermore, sleep is also related to quality of life. 
+         The more sleep one gets the better they perceive their own lives.
+ 
         "),
-        p("This study recognizes that sleep can be affected by
-        outside factors such as stress, environment, health, etc. 
-        Stress is a really big indicator of health. Those who slept 
-        7/8 hours of sleep saw a reduced amount of severe stress symptoms.
-        As sleep levels decrease we see an increased amount of severe and
-        very severe stress levels. 
+        p("This study recognizes that sleep can be affected by outside
+       factors such as stress, environment, health, etc. Stress is 
+       a really big indicator of health. Those who slept 7/8 hours 
+       of sleep saw a reduced amount of severe stress symptoms. 
+       As sleep levels decrease we see an increased amount of 
+       severe and very severe stress levels. With motivation levels, 
+       individuals who obtain about 8 hours of sleep reported feeling 
+       more motivated. To continue, motivation may also influence a boost in mental
+       and physical health. On average, those who slept 7 hours or more hours
+       reported having very good or excellent levels of mental and physical 
+       health. Simultaneously, with interpersonal relationships 22 percent of people reported
+       that their lack of sleep affects their sexual relationships. 
+ 
         ")
       )
   )
