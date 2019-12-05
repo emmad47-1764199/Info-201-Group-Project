@@ -7,4 +7,4 @@ See our [project proposal](https://github.com/emmad47-1764199/Info-201-Group-Pro
   
 See our [technical report](https://github.com/emmad47-1764199/Info-201-Group-Project/wiki/Technical-Report)
 
-See our [shiny application](https://info200-sleep-project.shinyapps.io/Info-201-Group-Project/)
+See our [shiny application](https://raehagf.shinyapps.io/Info-201-Group-Project/)
