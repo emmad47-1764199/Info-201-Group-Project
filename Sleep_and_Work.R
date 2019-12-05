@@ -15,7 +15,7 @@ sleep_and_workplace_page <- tabPanel(
           "Highest Education" = "education",
           "Income" = "income",
           "Sleeping and Driving" = "driving",
-          "Caffine" = "caffeine",
+          "Caffeine" = "caffine",
           "Quality of Life" = "quality"
         )
       )
