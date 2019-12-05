@@ -443,7 +443,7 @@ df <- filter_data1("d6", 7) %>%
   filter(freq == max(freq)) %>%
   pull(q7h)
 
-#Of the non college educated people, most get 6hrs of sleep
+#of the non college educated people, most get 6hrs of sleep
 df <- filter_data1("d6", 7) %>%
   select(d6, q7h) %>%
   filter(d6 < 4) %>%
