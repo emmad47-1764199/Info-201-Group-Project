@@ -1,7 +1,8 @@
-sleep_and_health_page <-  tabPanel(
+# Sleep and health page containing visual graphs and captions
+sleep_and_health_page <- tabPanel(
   "Sleep and Health",
   htmlOutput("sleep_health"),
-  
+
   sidebarLayout(
     sidebarPanel(
       h3("Sleep and Health"),
@@ -10,14 +11,16 @@ sleep_and_health_page <-  tabPanel(
         inputId = "health",
         label = "Typical Hours of Sleep vs...",
         selected = "Stress",
-        choices = list("Physical Health" = "physical",
-                       "Mental Health" = "mental",
-                       "Stress" = "stress",
-                       "Motivation" = "motivation",
-                       "Sexual Relationship" = "sex")
+        choices = list(
+          "Physical Health" = "physical",
+          "Mental Health" = "mental",
+          "Stress" = "stress",
+          "Motivation" = "motivation",
+          "Sexual Relationship" = "sex"
+        )
       )
     ),
-    
+
     mainPanel(
       plotOutput(outputId = "health_graph"),
       h3(),
